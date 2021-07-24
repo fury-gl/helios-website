@@ -1,0 +1,1082 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.backends.fury.actors &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.backends.fury.actors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.backends.fury.actors</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;VTK Super Actors</span>
+
+<span class="sd">This modules contains the VTK super actors to be used in the </span>
+<span class="sd">network visualization.</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">fury.shaders</span> <span class="kn">import</span> <span class="n">add_shader_callback</span><span class="p">,</span> <span class="n">attribute_to_actor</span>
+<span class="kn">from</span> <span class="nn">fury.shaders</span> <span class="kn">import</span> <span class="n">shader_to_actor</span><span class="p">,</span> <span class="n">load</span>
+<span class="kn">import</span> <span class="nn">fury.primitive</span> <span class="k">as</span> <span class="nn">fp</span>
+<span class="kn">from</span> <span class="nn">fury.utils</span> <span class="kn">import</span> <span class="n">get_actor_from_primitive</span>
+<span class="kn">from</span> <span class="nn">fury.utils</span> <span class="kn">import</span> <span class="n">vertices_from_actor</span><span class="p">,</span> <span class="n">array_from_actor</span>
+<span class="kn">from</span> <span class="nn">fury.utils</span> <span class="kn">import</span> <span class="n">update_actor</span>
+<span class="kn">from</span> <span class="nn">fury.actor</span> <span class="kn">import</span> <span class="n">line</span> <span class="k">as</span> <span class="n">line_actor</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">fury.shaders</span> <span class="kn">import</span> <span class="n">shader_apply_effects</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">shader_apply_effects</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="kn">from</span> <span class="nn">fury</span> <span class="kn">import</span> <span class="n">window</span>
+
+<span class="kn">from</span> <span class="nn">helios.backends.fury.tools</span> <span class="kn">import</span> <span class="n">Uniform</span><span class="p">,</span> <span class="n">Uniforms</span>
+
+<span class="n">_MARKER2Id</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;o&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;s6&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;3d&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="FurySuperNode"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.actors.html#helios.backends.fury.actors.FurySuperNode">[docs]</a><span class="k">class</span> <span class="nc">FurySuperNode</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">positions</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">scales</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">,</span>
+        <span class="n">edge_width</span><span class="o">=.</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">edge_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">edge_color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">marker_opacity</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span>
+        <span class="n">write_frag_depth</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vcount</span> <span class="o">=</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_composed_by_superactors</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># to avoid any kind of expansive calculations when we</span>
+        <span class="c1"># are dealing with just 2d markers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span> <span class="o">=</span> <span class="n">marker</span> <span class="o">==</span> <span class="s1">&#39;3d&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_frag_depth</span> <span class="o">=</span> <span class="n">write_frag_depth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span> <span class="o">=</span> <span class="n">marker</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">edge_color</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">edge_opacity</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span>
+                <span class="n">marker_opacity</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">edge_width</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+        <span class="c1"># self._edge_color_is_uniform = len(edge_color) == 3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_positions_is_uniform</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_actor</span><span class="p">(</span>
+            <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">colors</span><span class="p">,</span> <span class="n">scales</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="n">positions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_marker_property</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_edge_width_property</span><span class="p">(</span><span class="n">edge_width</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_edge_color_property</span><span class="p">(</span><span class="n">edge_color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_edge_opacity_property</span><span class="p">(</span><span class="n">edge_opacity</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_marker_opacity_property</span><span class="p">(</span><span class="n">marker_opacity</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_specular_strength_property</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_specular_mix_property</span><span class="p">(</span><span class="mf">1.</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_shadow_mix_property</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span> <span class="o">=</span> <span class="n">Uniforms</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_observerId</span> <span class="o">=</span> <span class="n">add_shader_callback</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_shader_frag</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blending</span> <span class="o">=</span> <span class="s1">&#39;additive&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depth_test</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">start_effects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">render_window</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="o">.</span><span class="n">GetMapper</span><span class="p">()</span><span class="o">.</span><span class="n">RemoveObserver</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span><span class="p">)</span>
+        <span class="n">effects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth_test</span><span class="p">:</span>
+            <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">window</span><span class="o">.</span><span class="n">gl_enable_depth</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">window</span><span class="o">.</span><span class="n">gl_disable_depth</span><span class="p">]</span>
+
+        <span class="n">blendings</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;additive&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_additive_blending</span><span class="p">,</span>
+            <span class="s1">&#39;subtractive&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_subtractive_blending</span><span class="p">,</span>
+            <span class="s1">&#39;multiplicative&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_multiplicative_blending</span><span class="p">,</span>
+            <span class="s1">&#39;normal&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_normal_blending</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">blendings</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">blending</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="o">=</span> <span class="n">shader_apply_effects</span><span class="p">(</span>
+            <span class="n">render_window</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+            <span class="n">effects</span><span class="o">=</span><span class="n">effects</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_actor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_nodes</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">scales</span><span class="p">):</span>
+
+        <span class="c1"># to avoid memory corruption</span>
+        <span class="n">centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_nodes</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+        <span class="n">verts</span><span class="p">,</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">prim_square</span><span class="p">()</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">repeat_primitive</span><span class="p">(</span>
+            <span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">centers</span><span class="p">,</span>
+            <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+            <span class="n">scales</span><span class="o">=</span><span class="n">scales</span><span class="p">)</span>
+
+        <span class="n">big_verts</span><span class="p">,</span> <span class="n">big_faces</span><span class="p">,</span> <span class="n">big_colors</span><span class="p">,</span> <span class="n">big_centers</span> <span class="o">=</span> <span class="n">res</span>
+        <span class="n">actor</span> <span class="o">=</span> <span class="n">get_actor_from_primitive</span><span class="p">(</span>
+            <span class="n">big_verts</span><span class="p">,</span> <span class="n">big_faces</span><span class="p">,</span> <span class="n">big_colors</span><span class="p">)</span>
+        <span class="n">actor</span><span class="o">.</span><span class="n">GetMapper</span><span class="p">()</span><span class="o">.</span><span class="n">SetVBOShiftScaleMethod</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">BackfaceCullingOff</span><span class="p">()</span>
+
+        <span class="n">attribute_to_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">,</span> <span class="n">big_centers</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo_orig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">num_nodes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verts_geo</span> <span class="o">=</span> <span class="n">vertices_from_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verts_geo_orig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_verts_geo</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;colors&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span> <span class="o">=</span> <span class="n">actor</span>
+        <span class="c1"># update to correct positions</span>
+
+    <span class="k">def</span> <span class="nf">_init_marker_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">_MARKER2Id</span><span class="p">[</span><span class="n">data</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;marker&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">data</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">_MARKER2Id</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+            <span class="n">attribute_to_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+                <span class="n">data</span><span class="p">,</span> <span class="s1">&#39;vMarker&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;vMarker&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_edge_color_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge_color</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;edgeColor&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;3f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">edge_color</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edge_color_by_vertex</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">edge_color</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+            <span class="n">attribute_to_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+                <span class="n">edge_color_by_vertex</span><span class="p">,</span>
+                <span class="s1">&#39;vEdgeColor&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;vEdgeColor&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_edge_width_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge_width</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;edgeWidth&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">edge_width</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edge_width_by_vertex</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">edge_width</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+            <span class="n">attribute_to_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+                <span class="n">edge_width_by_vertex</span><span class="p">,</span>
+                <span class="s1">&#39;vEdgeWidth&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;vEdgeWidth&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_edge_opacity_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">opacity</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;edgeOpacity&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">opacity</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edge_opacity_by_vertex</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">opacity</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+            <span class="n">attribute_to_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+                <span class="n">edge_opacity_by_vertex</span><span class="p">,</span>
+                <span class="s1">&#39;vEdgeOpacity&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;vEdgeOpacity&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_marker_opacity_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">opacity</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;markerOpacity&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">opacity</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">marker_opacity_by_vertex</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">opacity</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+            <span class="n">attribute_to_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+                <span class="n">marker_opacity_by_vertex</span><span class="p">,</span>
+                <span class="s1">&#39;vMarkerOpacity&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;vMarkerOpacity&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_specular_strength_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;specularStrength&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_init_shadow_mix_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;shadowMix&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_init_specular_mix_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uniforms_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Uniform</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;specularMix&#39;</span><span class="p">,</span> <span class="n">uniform_type</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shader_dec_vert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">shader</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;billboard_dec.vert&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    in float vMarker;</span><span class="se">\n</span><span class="s2"></span>
+<span class="s2">                    out float marker;</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float vEdgeWidth; </span><span class="se">\n</span><span class="s1">out float edgeWidth;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in vec3 vEdgeColor;</span><span class="se">\n</span><span class="s1"> out vec3 edgeColor;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float vEdgeOpacity;</span><span class="se">\n</span><span class="s1"> out float edgeOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float vMarkerOpacity;</span><span class="se">\n</span><span class="s1"> out float markerOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">shader</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shader_impl_vert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">shader</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;billboard_impl.vert&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;marker = vMarker;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;edgeWidth = vEdgeWidth;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;edgeColor = vEdgeColor;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;edgeOpacity = vEdgeOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;markerOpacity = vMarkerOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">shader</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shader_dec_frag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">shader</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;billboard_dec.frag&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float markerOpacity;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float markerOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float edgeOpacity;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float edgeOpacity;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float edgeWidth;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in float edgeWidth;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform vec3 edgeColor;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s1">&#39;in vec3 edgeColor;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float marker;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;in float marker;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float specularStrength;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float specularMix;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;uniform float shadowMix;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            uniform mat4 MCDCMatrix;</span>
+<span class="s2">            uniform mat4 MCVCMatrix;</span>
+
+<span class="s2">            float ndot(vec2 a, vec2 b ) {</span>
+<span class="s2">                return a.x*b.x - a.y*b.y;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc0(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                //circle or sphere sdf func</span>
+<span class="s2">                float  sdf = 0;</span>
+<span class="s2">                float minSdf = 0;</span>
+
+<span class="s2">                edgeWidth = edgeWidth/2.;</span>
+<span class="s2">                minSdf = 0.5;</span>
+<span class="s2">                sdf = -length(p) + s;</span>
+
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc1(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                //square sdf func</span>
+<span class="s2">                edgeWidth = edgeWidth/2.;</span>
+<span class="s2">                float minSdf = 0.5/2.0;</span>
+<span class="s2">                vec2 d = abs(p) - vec2(s, s);</span>
+<span class="s2">                float sdf = -length(max(d,0.0)) - min(max(d.x,d.y),0.0);</span>
+
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc2(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                //diamond sdf func</span>
+
+<span class="s2">               edgeWidth = edgeWidth/4.;</span>
+<span class="s2">               float minSdf = 0.5/2.0;</span>
+<span class="s2">                vec2 b  = vec2(s, s/2.0);</span>
+<span class="s2">                vec2 q = abs(p);</span>
+<span class="s2">                float h = clamp((-2.0*ndot(q,b)+ndot(b,b))/dot(b,b),-1.0,1.0);</span>
+<span class="s2">                float d = length( q - 0.5*b*vec2(1.0-h,1.0+h) );</span>
+<span class="s2">                float sdf = -d * sign( q.x*b.y + q.y*b.x - b.x*b.y );</span>
+
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+
+<span class="s2">            vec3 getDistFunc3(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                float l = s/1.5;</span>
+<span class="s2">                float minSdf = 1000.0;</span>
+<span class="s2">                float k = sqrt(3.0);</span>
+<span class="s2">                p.x = abs(p.x) - l;</span>
+<span class="s2">                p.y = p.y + l/k;</span>
+<span class="s2">                if( p.x+k*p.y&gt;0.0 ) p = vec2(p.x-k*p.y,-k*p.x-p.y)/2.0;</span>
+<span class="s2">                p.x -= clamp( p.x, -2.0*l, 0.0 );</span>
+<span class="s2">                float sdf = length(p)*sign(p.y);</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc4(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                edgeWidth = edgeWidth/4.;</span>
+<span class="s2">                float minSdf = 0.5/2.0;</span>
+<span class="s2">                float r = s/2.0;</span>
+<span class="s2">                const vec3 k = vec3(0.809016994,0.587785252,0.726542528);</span>
+<span class="s2">                p.x = abs(p.x);</span>
+<span class="s2">                p -= 2.0*min(dot(vec2(-k.x,k.y),p),0.0)*vec2(-k.x,k.y);</span>
+<span class="s2">                p -= 2.0*min(dot(vec2( k.x,k.y),p),0.0)*vec2( k.x,k.y);</span>
+<span class="s2">                p -= vec2(clamp(p.x,-r*k.z,r*k.z),r);</span>
+<span class="s2">                float sdf = -length(p)*sign(p.y);</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc5(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                edgeWidth = edgeWidth/4.;</span>
+<span class="s2">                float minSdf = 0.5/2.0;</span>
+<span class="s2">                float r = s/2.0;</span>
+<span class="s2">                const vec3 k = vec3(-0.866025404,0.5,0.577350269);</span>
+<span class="s2">                p = abs(p);</span>
+<span class="s2">                p -= 2.0*min(dot(k.xy,p),0.0)*k.xy;</span>
+<span class="s2">                p -= vec2(clamp(p.x, -k.z*r, k.z*r), r);</span>
+<span class="s2">                float sdf = -length(p)*sign(p.y);</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc6(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                float minSdf = 0.5/2.0;</span>
+<span class="s2">                edgeWidth = edgeWidth/4.;</span>
+<span class="s2">                float r = s/2.0;</span>
+<span class="s2">                const vec4 k = vec4(-0.5,0.8660254038,0.5773502692,1.7320508076);</span>
+<span class="s2">                p = abs(p);</span>
+<span class="s2">                p -= 2.0*min(dot(k.xy,p),0.0)*k.xy;</span>
+<span class="s2">                p -= 2.0*min(dot(k.yx,p),0.0)*k.yx;</span>
+<span class="s2">                p -= vec2(clamp(p.x,r*k.z,r*k.w),r);</span>
+<span class="s2">                float sdf = -length(p)*sign(p.y);</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc7(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                edgeWidth = edgeWidth/8.;</span>
+<span class="s2">                float minSdf = 0.5/4.0;</span>
+<span class="s2">                float r = s/4.0;</span>
+<span class="s2">                float w = 0.5;</span>
+<span class="s2">                p = abs(p);</span>
+<span class="s2">                float sdf = -length(p-min(p.x+p.y,w)*0.5) + r;</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+<span class="s2">            vec3 getDistFunc8(vec2 p, float s, float edgeWidth){</span>
+<span class="s2">                edgeWidth = edgeWidth/4.;</span>
+<span class="s2">                float minSdf = 0.5/2.0;</span>
+<span class="s2">                float r = s/15.0; //corner radius</span>
+<span class="s2">                vec2 b = vec2(s/1.0, s/3.0); //base , size</span>
+<span class="s2">                //vec2 b = vec2(r, r);</span>
+<span class="s2">                p = abs(p); p = (p.y&gt;p.x) ? p.yx : p.xy;</span>
+<span class="s2">                vec2  q = p - b;</span>
+<span class="s2">                float k = max(q.y,q.x);</span>
+<span class="s2">                vec2  w = (k&gt;0.0) ? q : vec2(b.y-p.x,-k);</span>
+<span class="s2">                float sdf = -sign(k)*length(max(w,0.0)) - r;</span>
+<span class="s2">                vec3 result = vec3(sdf, minSdf, edgeWidth);</span>
+<span class="s2">                return result ;</span>
+<span class="s2">            }</span>
+
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="c1"># shader += &quot;&quot;&quot;</span>
+        <span class="c1">#     vec3 getDistFunc(vec2 p, float s, float edgeWidth, int marker){</span>
+        <span class="c1">#         vec3 result = vec3(0., 0., 0.);</span>
+        <span class="c1">#         switch (marker) {</span>
+        <span class="c1">#     &quot;&quot;&quot;</span>
+        <span class="c1"># for i in range(0, 9):</span>
+        <span class="c1">#     shader += f&quot;&quot;&quot;</span>
+        <span class="c1">#         case {i}:</span>
+        <span class="c1">#             result = getDistFunc{i}(p, s, edgeWidth);</span>
+        <span class="c1">#             break;</span>
+        <span class="c1">#     &quot;&quot;&quot;</span>
+        <span class="n">dist_func_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            vec3 getDistFunc(vec2 p, float s, float edgeWidth, float marker){</span>
+<span class="s2">                vec3 result = vec3(0., 0., 0.);</span>
+<span class="s2">                if (marker==0.) {</span>
+<span class="s2">                    result = getDistFunc0(p, s, edgeWidth);</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+            <span class="n">dist_func_str</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                </span><span class="si">{</span><span class="s1">&#39;}&#39;</span><span class="si">}</span><span class="s2">else if(marker==</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.)</span><span class="si">{</span><span class="s1">&#39;{&#39;</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">                    result = getDistFunc</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">(p, s, edgeWidth);</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="n">dist_func_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">return result;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">shader</span> <span class="o">+=</span> <span class="n">dist_func_str</span>
+        <span class="k">return</span> <span class="n">shader</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shader_impl_frag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">shader</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;billboard_impl.frag&quot;</span><span class="p">)</span>
+
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">        float len = length(point);</span>
+<span class="s2">        float radius = 1.;</span>
+<span class="s2">        float s = 0.5;</span>
+<span class="s2">        vec3 result = getDistFunc(point.xy, s, edgeWidth, marker);</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            float sdf = result.x;</span>
+<span class="s2">            float minSdf = result.y;</span>
+<span class="s2">            float edgeWidthNew = result.z;</span>
+
+<span class="s2">            if (sdf&lt;0.0) discard;&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            /* Calculating the 3D distance d from the center */</span>
+<span class="s2">            float d = sqrt(1. - len*len);</span>
+
+<span class="s2">            /* Calculating the normal as if we had a sphere of radius len*/</span>
+<span class="s2">            vec3 normalizedPoint = normalize(vec3(point.xy, sdf));</span>
+
+<span class="s2">            /* Defining a fixed light direction */</span>
+<span class="s2">            vec3 direction = normalize(vec3(1., 1., 1.));</span>
+
+<span class="s2">            /* Calculating diffuse */</span>
+<span class="s2">            float ddf = max(0, dot(direction, normalizedPoint));</span>
+
+<span class="s2">            /* Calculating specular */</span>
+<span class="s2">            float ssf = pow(ddf, specularStrength);</span>
+
+<span class="s2">            /* Calculating colors based on a fixed light */</span>
+<span class="s2">            color = max(color*shadowMix+ddf * color, ssf * vec3(specularMix));</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_write_frag_depth</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span><span class="p">:</span>
+            <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            /* Obtaining the two clipping planes for depth buffer */</span>
+<span class="s2">            float far = gl_DepthRange.far;</span>
+<span class="s2">            float near = gl_DepthRange.near;</span>
+
+<span class="s2">            /* Getting camera Z vector */</span>
+<span class="s2">            vec3 cameraZ = vec3(MCVCMatrix[0][2], MCVCMatrix[1][2], MCVCMatrix[2][2]);</span>
+
+<span class="s2">            /* Get the displaced position based on camera z by adding d</span>
+<span class="s2">            in this direction */</span>
+<span class="s2">            vec4 positionDisplaced = vec4(centerVertexMCVSOutput.xyz</span>
+<span class="s2">                                        +cameraZ*d,1.0);</span>
+
+<span class="s2">            /* Projecting the displacement to the viewport */</span>
+<span class="s2">            vec4 positionDisplacedDC = (MCDCMatrix*positionDisplaced);</span>
+
+<span class="s2">            /* Applying perspective transformation to z */</span>
+<span class="s2">            float depth = positionDisplacedDC.z/positionDisplacedDC.w;</span>
+
+<span class="s2">            /* Interpolating the z of the displacement between far and near planes */</span>
+<span class="s2">            depth = ((far-near) * (depth) + near + far) / 2.0;</span>
+
+<span class="s2">            /* Writing the final depth to depth buffer */</span>
+<span class="s2">            gl_FragDepth = depth;</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="n">shader</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            vec4 rgba = vec4(  color, markerOpacity );</span>
+<span class="s2">            if (edgeWidthNew &gt; 0.0){</span>
+<span class="s2">                if (sdf &lt; edgeWidthNew) {</span>
+<span class="s2">                    rgba = vec4(edgeColor, edgeOpacity);</span>
+<span class="s2">                }</span>
+<span class="s2">            }</span>
+
+<span class="s2">            fragOutput0 = rgba;</span>
+
+<span class="s2">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">shader</span>
+
+    <span class="k">def</span> <span class="nf">_init_shader_frag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># fs_impl_code = load(&#39;billboard_impl.frag&#39;)</span>
+        <span class="c1"># if self._marker_is_3d:</span>
+        <span class="c1">#     fs_impl_code += f&#39;{load(&quot;billboard_spheres_impl.frag&quot;)}&#39;</span>
+        <span class="c1"># else:</span>
+        <span class="c1">#     fs_impl_code += f&#39;{load(&quot;marker_billboard_impl.frag&quot;)}&#39;</span>
+        <span class="n">shader_to_actor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+            <span class="s2">&quot;vertex&quot;</span><span class="p">,</span> <span class="n">impl_code</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shader_impl_vert</span><span class="p">,</span>
+            <span class="n">decl_code</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shader_dec_vert</span><span class="p">)</span>
+        <span class="n">shader_to_actor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+            <span class="s2">&quot;fragment&quot;</span><span class="p">,</span> <span class="n">decl_code</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shader_dec_frag</span><span class="p">)</span>
+        <span class="n">shader_to_actor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+            <span class="s2">&quot;fragment&quot;</span><span class="p">,</span> <span class="n">impl_code</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shader_impl_frag</span><span class="p">,</span>
+            <span class="n">block</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">edge_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeWidth</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@edge_width</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">edge_width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeWidth</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_width</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span><span class="p">[::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@marker</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_3d</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;3d markers cannot be changed&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_is_uniform</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">_MARKER2Id</span><span class="p">[</span><span class="n">data</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">_MARKER2Id</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeColor</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span><span class="p">[::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@edge_color</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeColor</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">marker_opacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">markerOpacity</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity</span><span class="p">[::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@marker_opacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">marker_opacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">markerOpacity</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_opacity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">edge_opacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeOpacity</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity</span><span class="p">[::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@edge_opacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">edge_opacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity_is_uniform</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">edgeOpacity</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edge_opacity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">specular_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">specularStrength</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="nd">@specular_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">specular_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">specularStrength</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">specular_mix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">specularMix</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="nd">@specular_mix</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">specular_mix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">specularMix</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shadow_mix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">shadowMix</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="nd">@shadow_mix</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">shadow_mix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Uniforms</span><span class="o">.</span><span class="n">shadowMix</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@positions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+        <span class="c1"># avoids memory corruption</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+            <span class="n">positions</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verts_geo</span><span class="p">[:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verts_geo_orig</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_geo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">colors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">]</span>
+
+    <span class="nd">@colors</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">colors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_colors</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+            <span class="n">new_colors</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centers_length</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">update_actor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;FurySuperActorNode num_nodes </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_vcount</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;FurySuperActorNode num_nodes </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_vcount</span><span class="si">}</span><span class="s1">&#39;</span></div>
+
+
+<div class="viewcode-block" id="FurySuperEdge"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.actors.html#helios.backends.fury.actors.FurySuperEdge">[docs]</a><span class="k">class</span> <span class="nc">FurySuperEdge</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">edges</span><span class="p">,</span>
+        <span class="n">positions</span><span class="p">,</span>
+        <span class="n">colors</span><span class="p">,</span>
+        <span class="n">opacity</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">blending</span><span class="o">=</span><span class="s1">&#39;additive&#39;</span><span class="p">,</span>
+    <span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="o">=</span> <span class="n">edges</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_edges</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span> <span class="o">=</span> <span class="n">line_actor</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_edges</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+            <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="n">line_width</span><span class="p">,</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_2d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="n">positions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span> <span class="o">=</span> <span class="n">array_from_actor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span> <span class="n">array_name</span><span class="o">=</span><span class="s2">&quot;colors&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blending</span> <span class="o">=</span> <span class="n">blending</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depth_test</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">start_effects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">render_window</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="o">.</span><span class="n">GetMapper</span><span class="p">()</span><span class="o">.</span><span class="n">RemoveObserver</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span><span class="p">)</span>
+        <span class="n">effects</span> <span class="o">=</span> <span class="p">[</span><span class="n">window</span><span class="o">.</span><span class="n">gl_enable_blend</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth_test</span><span class="p">:</span>
+            <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">window</span><span class="o">.</span><span class="n">gl_enable_depth</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">window</span><span class="o">.</span><span class="n">gl_disable_depth</span><span class="p">]</span>
+
+        <span class="n">blendings</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;additive&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_additive_blending</span><span class="p">,</span>
+            <span class="s1">&#39;subtractive&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_subtractive_blending</span><span class="p">,</span>
+            <span class="s1">&#39;multiplicative&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_multiplicative_blending</span><span class="p">,</span>
+            <span class="s1">&#39;normal&#39;</span><span class="p">:</span> <span class="n">window</span><span class="o">.</span><span class="n">gl_set_normal_blending</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">effects</span> <span class="o">+=</span> <span class="p">[</span><span class="n">blendings</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">blending</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer_effects</span> <span class="o">=</span> <span class="n">shader_apply_effects</span><span class="p">(</span>
+            <span class="n">render_window</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">,</span>
+            <span class="n">effects</span><span class="o">=</span><span class="n">effects</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@positions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;positions never it&#39;s a uniform variable</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># avoids memory corruption</span>
+
+        <span class="n">edges_positions</span> <span class="o">=</span> <span class="n">vertices_from_actor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">)</span>
+        <span class="n">edges_positions</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">positions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]]</span>
+        <span class="n">edges_positions</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">positions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]]</span>
+        <span class="n">update_actor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">colors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span>
+
+    <span class="nd">@colors</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">colors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_colors</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_colors_geo</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">new_colors</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">update_actor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="NetworkSuperActor"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.actors.html#helios.backends.fury.actors.NetworkSuperActor">[docs]</a><span class="k">class</span> <span class="nc">NetworkSuperActor</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">positions</span><span class="p">,</span>
+        <span class="n">edges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">scales</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+        <span class="n">node_edge_width</span><span class="o">=.</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">node_opacity</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span>
+        <span class="n">node_edge_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">node_edge_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+        <span class="n">edge_line_color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">edge_line_opacity</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">edge_line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">write_frag_depth</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_2d</span> <span class="o">=</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_2d</span><span class="p">:</span>
+            <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+                            <span class="n">positions</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">positions</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                            <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span><span class="o">.</span><span class="n">T</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">FurySuperNode</span><span class="p">(</span>
+            <span class="n">positions</span><span class="o">=</span><span class="n">positions</span><span class="p">,</span>
+            <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+            <span class="n">scales</span><span class="o">=</span><span class="n">scales</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span>
+            <span class="n">edge_opacity</span><span class="o">=</span><span class="n">node_edge_opacity</span><span class="p">,</span>
+            <span class="n">edge_width</span><span class="o">=</span><span class="n">node_edge_width</span><span class="p">,</span>
+            <span class="n">edge_color</span><span class="o">=</span><span class="n">node_edge_color</span><span class="p">,</span>
+            <span class="n">marker_opacity</span><span class="o">=</span><span class="n">node_opacity</span><span class="p">,</span>
+            <span class="n">write_frag_depth</span><span class="o">=</span><span class="n">write_frag_depth</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actors</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">edges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">edges</span> <span class="o">=</span> <span class="n">FurySuperEdge</span><span class="p">(</span>
+                <span class="n">edges</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">edge_line_color</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="n">edge_line_opacity</span><span class="p">,</span>
+                <span class="n">line_width</span><span class="o">=</span><span class="n">edge_line_width</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actors</span> <span class="o">+=</span> <span class="p">[</span><span class="n">edges</span><span class="o">.</span><span class="n">vtk_actor</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="o">=</span> <span class="n">edges</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">positions</span>
+
+    <span class="nd">@positions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">positions</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">positions</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span><span class="o">.</span><span class="n">T</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="n">positions</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="n">positions</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actors</span><span class="p">:</span>
+            <span class="n">update_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span></div>
+
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

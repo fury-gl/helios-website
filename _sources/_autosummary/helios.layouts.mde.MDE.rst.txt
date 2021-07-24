@@ -1,0 +1,24 @@
+helios.layouts.mde.MDE
+======================
+
+.. currentmodule:: helios.layouts.mde
+
+.. autoclass:: MDE
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+ 
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MDE.cleanup
+      ~MDE.start
+      ~MDE.stop
+      ~MDE.update
+   
+   
+   

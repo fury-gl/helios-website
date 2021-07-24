@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.layouts.base &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.layouts.base</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.layouts.base</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Network Layout Abstract Classes</span>
+
+<span class="sd">This module provides a set of abstract classes to deal with</span>
+<span class="sd">different network layouts algorithms using different communication</span>
+<span class="sd">strategies.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">fury.stream.tools</span> <span class="kn">import</span> <span class="n">IntervalTimer</span>
+
+<span class="kn">from</span> <span class="nn">helios.layouts.ipc_tools</span> <span class="kn">import</span> <span class="n">ShmManagerMultiArrays</span>
+
+
+<div class="viewcode-block" id="NetworkLayout"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayout">[docs]</a><span class="k">class</span> <span class="nc">NetworkLayout</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">steps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_super_actor</span><span class="o">.</span><span class="n">positions</span>
+
+    <span class="nd">@positions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_positions</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_positions</span> <span class="o">=</span> <span class="n">new_positions</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_positions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="NetworkLayoutAsync"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutAsync">[docs]</a><span class="k">class</span> <span class="nc">NetworkLayoutAsync</span><span class="p">(</span><span class="n">NetworkLayout</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="is_running"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.is_running">[docs]</a><span class="k">def</span> <span class="nf">is_running</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Check if the process *p* is running</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    p : process</span>
+<span class="sd">    timeout : float, optional</span>
+<span class="sd">        positive float</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    running : bool</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">TimeoutExpired</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">p</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="kc">None</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">running</span></div>
+
+
+<div class="viewcode-block" id="NetworkLayoutIPCServerCalc"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCServerCalc">[docs]</a><span class="k">class</span> <span class="nc">NetworkLayoutIPCServerCalc</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An abstract class which reads the network information</span>
+<span class="sd">    from the shared memory resources.</span>
+
+<span class="sd">    This should be used</span>
+<span class="sd">    inside of a subprocess which will update the network layout positions</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">num_nodes</span><span class="p">,</span>
+        <span class="n">num_edges</span><span class="p">,</span>
+        <span class="n">edges_buffer_name</span><span class="p">,</span>
+        <span class="n">positions_buffer_name</span><span class="p">,</span>
+        <span class="n">info_buffer_name</span><span class="p">,</span>
+        <span class="n">weights_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">dimension</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">snaphosts_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">num_snapshots</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        num_nodes : int</span>
+<span class="sd">        num_edges : int</span>
+<span class="sd">        edges_buffer_name : str</span>
+<span class="sd">        positions_buffer_name : str</span>
+<span class="sd">        info_buffer_name : str</span>
+<span class="sd">        weights_buffer_name : str, optional</span>
+<span class="sd">        dimension : int</span>
+<span class="sd">        snaphosts_buffer_name : str, optional</span>
+<span class="sd">        num_snapshots : int, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span> <span class="o">=</span> <span class="n">dimension</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span> <span class="o">=</span> <span class="n">ShmManagerMultiArrays</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+            <span class="s1">&#39;info&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">info_buffer_name</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">,</span> <span class="n">num_elements</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+            <span class="s1">&#39;positions&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">positions_buffer_name</span><span class="p">,</span>
+            <span class="n">dimension</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">,</span> <span class="n">num_elements</span><span class="o">=</span><span class="n">num_nodes</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+            <span class="s1">&#39;edges&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">edges_buffer_name</span><span class="p">,</span>
+            <span class="n">dimension</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="n">num_elements</span><span class="o">=</span><span class="n">num_edges</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">weights_buffer_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+                <span class="s1">&#39;weights&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">weights_buffer_name</span><span class="p">,</span>
+                <span class="n">dimension</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">,</span> <span class="n">num_elements</span><span class="o">=</span><span class="n">num_edges</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span> <span class="o">=</span> <span class="n">snaphosts_buffer_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+                <span class="s1">&#39;snapshots_positions&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">snaphosts_buffer_name</span><span class="p">,</span>
+                <span class="n">dimension</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">,</span>
+                <span class="n">num_elements</span><span class="o">=</span><span class="n">num_nodes</span><span class="o">*</span><span class="n">num_snapshots</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_num_snapshots</span> <span class="o">=</span> <span class="n">num_snapshots</span>
+
+<div class="viewcode-block" id="NetworkLayoutIPCServerCalc.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCServerCalc.start">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method starts the network layout algorithm.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        steps : int</span>
+<span class="sd">            number of iterations to perform</span>
+<span class="sd">        iters_by_step: int</span>
+<span class="sd">            number of iterations to perform between each step</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+
+    <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method update the shared memory resource which stores the</span>
+<span class="sd">        network positions. Usually, you should call this inside of the</span>
+<span class="sd">        start method implementation</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        positions : ndarray</span>
+<span class="sd">            a numpy array with shape (num_nodes, self._dimension)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># self._shm_manager.update_array(if self._record_positions:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">snapshots_positions</span><span class="o">.</span><span class="n">update_snapshot</span><span class="p">(</span>
+                <span class="n">positions</span><span class="p">,</span> <span class="n">step</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_snapshots</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">positions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">step</span>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="NetworkLayoutIPCRender"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCRender">[docs]</a><span class="k">class</span> <span class="nc">NetworkLayoutIPCRender</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An abstract class which reads the network information</span>
+<span class="sd">        and creates the shared memory resources.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">network_draw</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        network_draw : NetworkDraw</span>
+<span class="sd">            A NetworkDraw object which will be used to draw the network</span>
+<span class="sd">        edges : ndarray</span>
+<span class="sd">            a bi-dimensional array with the edges list</span>
+<span class="sd">        weights : array, optional</span>
+<span class="sd">            a one-dimensional array with the edge weights</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id_timer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span> <span class="o">=</span> <span class="n">network_draw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">network_draw</span><span class="o">.</span><span class="n">_is_2d</span> <span class="k">else</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span> <span class="o">=</span> <span class="n">ShmManagerMultiArrays</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+            <span class="s1">&#39;positions&#39;</span><span class="p">,</span>
+            <span class="n">network_draw</span><span class="o">.</span><span class="n">positions</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">],</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">,</span>
+            <span class="s1">&#39;float32&#39;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+            <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
+            <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;float32&#39;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+            <span class="s1">&#39;edges&#39;</span><span class="p">,</span>
+            <span class="n">edges</span><span class="p">,</span>
+            <span class="mi">2</span><span class="p">,</span>
+            <span class="s1">&#39;int64&#39;</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+                <span class="s1">&#39;weights&#39;</span><span class="p">,</span>
+                <span class="n">weights</span><span class="p">,</span>
+                <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;float32&#39;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_nodes</span> <span class="o">=</span> <span class="n">network_draw</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_edges</span> <span class="o">=</span> <span class="n">edges</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_command_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the python code which will compute</span>
+<span class="sd">        the layout positions.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        steps : int</span>
+<span class="sd">            number of steps; snapshots.</span>
+<span class="sd">            For example, if you set steps=3 that means the positions will</span>
+<span class="sd">            be updated three times.</span>
+<span class="sd">        iters_by_step : int</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        command_string : str</span>
+<span class="sd">            a string with a code that starts the layout algorithm.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+
+<div class="viewcode-block" id="NetworkLayoutIPCRender.update"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCRender.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method updates the position of the network actor</span>
+<span class="sd">        and right after that refresh the network draw</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span>\
+                <span class="n">snapshots_positions</span><span class="o">.</span><span class="n">get_snapshot</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_nodes</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_steps</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">positions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="NetworkLayoutIPCRender.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCRender.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">record_positions</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">without_iren_start</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method starts the network layout algorithm</span>
+<span class="sd">        creating a new subprocess.</span>
+
+<span class="sd">        Right after the network layout algorithm</span>
+<span class="sd">        finish the computation (ending of the related subprocess),</span>
+<span class="sd">        the stop method will be called automatically.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        ms : float</span>
+<span class="sd">            time interval in milleseconds to update the positions inside</span>
+<span class="sd">            of the NetworkDraw</span>
+<span class="sd">        steps : int</span>
+<span class="sd">            number of steps; snapshots.</span>
+<span class="sd">            For example, if you set steps=3 that means the positions will</span>
+<span class="sd">            be updated three times.</span>
+<span class="sd">        iters_by_step : int</span>
+<span class="sd">            number of interations in each step</span>
+<span class="sd">        record_positions : bool, optional, default True</span>
+<span class="sd">            Record the positions of the network</span>
+<span class="sd">        without_iren_start : bool, optional, default True</span>
+<span class="sd">            Set this to False if you will start the ShowManager.</span>
+<span class="sd">            That is, if you will invoke the following commands</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+
+<span class="sd">            &gt;&gt;&gt; network_draw.initialize()</span>
+<span class="sd">            &gt;&gt;&gt; network_draw.start()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span> <span class="o">=</span> <span class="n">record_positions</span>
+        <span class="k">if</span> <span class="n">record_positions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+                <span class="s1">&#39;snapshots_positions&#39;</span><span class="p">,</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">_num_elements</span><span class="o">*</span><span class="n">steps</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">,</span>
+                <span class="s1">&#39;float32&#39;</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_steps</span> <span class="o">=</span> <span class="n">steps</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_update</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s1">&#39;-c&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_string</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
+            <span class="n">args</span><span class="p">,</span>
+            <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">callback_update_pos</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+                <span class="n">should_update</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_and_sync</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">should_update</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">without_iren_start</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">AddObserver</span><span class="p">(</span>
+                        <span class="s2">&quot;TimerEvent&quot;</span><span class="p">,</span> <span class="n">callback_update_pos</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_id_timer</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">CreateRepeatingTimer</span><span class="p">(</span><span class="n">ms</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="n">IntervalTimer</span><span class="p">(</span>
+                        <span class="n">ms</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">callback_update_pos</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_and_sync</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        This will check  two conditions:</span>
+<span class="sd">        1 - If the positions in the shared memory resources have</span>
+<span class="sd">        changed.</span>
+<span class="sd">        2 - If the process responsible to compute the layout positions</span>
+<span class="sd">        finished the computations</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        should_update : bool</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">last_update</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_update</span> <span class="o">=</span> <span class="n">last_update</span>
+
+        <span class="c1"># if stop has been called inside the treading timer</span>
+        <span class="c1"># maybe another callback can be executed</span>
+        <span class="n">ok</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_step</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="c1"># if the process finished then stop the callback</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">is_running</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="n">ok</span>
+
+<div class="viewcode-block" id="NetworkLayoutIPCRender.stop"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCRender.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop the layout algorithm</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id_timer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">DestroyTimer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_id_timer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_id_timer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">RemoveObserver</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_id_observer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_id_observer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pserver</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">cleanup_mem</span><span class="p">(</span><span class="s1">&#39;snapshots_positions&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="NetworkLayoutIPCRender.cleanup"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.base.html#helios.layouts.base.NetworkLayoutIPCRender.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Release the shared memory resources</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

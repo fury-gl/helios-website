@@ -1,0 +1,31 @@
+helios.layouts.ipc\_tools.GenericArrayBufferManager
+===================================================
+
+.. currentmodule:: helios.layouts.ipc_tools
+
+.. autoclass:: GenericArrayBufferManager
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~GenericArrayBufferManager.cleanup
+      ~GenericArrayBufferManager.create_mem_resource
+      ~GenericArrayBufferManager.load_mem_resource
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.ipc_tools.GenericArrayBufferManager.GenericArrayBufferManager:
+      .. minigallery:: helios.layouts.ipc_tools.GenericArrayBufferManager.GenericArrayBufferManager
+         :add-heading:
+   

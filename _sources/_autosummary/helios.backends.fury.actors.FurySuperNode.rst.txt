@@ -1,0 +1,49 @@
+helios.backends.fury.actors.FurySuperNode
+=========================================
+
+.. currentmodule:: helios.backends.fury.actors
+
+.. autoclass:: FurySuperNode
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FurySuperNode.start_effects
+      ~FurySuperNode.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FurySuperNode.colors
+      ~FurySuperNode.edge_color
+      ~FurySuperNode.edge_opacity
+      ~FurySuperNode.edge_width
+      ~FurySuperNode.marker
+      ~FurySuperNode.marker_opacity
+      ~FurySuperNode.positions
+      ~FurySuperNode.shader_dec_frag
+      ~FurySuperNode.shader_dec_vert
+      ~FurySuperNode.shader_impl_frag
+      ~FurySuperNode.shader_impl_vert
+      ~FurySuperNode.shadow_mix
+      ~FurySuperNode.specular_mix
+      ~FurySuperNode.specular_strength
+   
+   
+   
+      .. _sphx_glr_backref_helios.backends.fury.actors.FurySuperNode.FurySuperNode:
+      .. minigallery:: helios.backends.fury.actors.FurySuperNode.FurySuperNode
+         :add-heading:
+   

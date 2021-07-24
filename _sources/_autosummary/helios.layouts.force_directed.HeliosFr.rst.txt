@@ -1,0 +1,38 @@
+helios.layouts.force\_directed.HeliosFr
+=======================================
+
+.. currentmodule:: helios.layouts.force_directed
+
+.. autoclass:: HeliosFr
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~HeliosFr.start
+      ~HeliosFr.steps
+      ~HeliosFr.stop
+      ~HeliosFr.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HeliosFr.positions
+   
+   
+    
+      .. _sphx_glr_backref_helios.layouts.HeliosFr:
+      .. minigallery:: helios.layouts.HeliosFr
+         :add-heading:
+   

@@ -1,0 +1,40 @@
+helios.layouts.ipc\_tools.SharedMemArrayManager
+===============================================
+
+.. currentmodule:: helios.layouts.ipc_tools
+
+.. autoclass:: SharedMemArrayManager
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SharedMemArrayManager.cleanup
+      ~SharedMemArrayManager.create_mem_resource
+      ~SharedMemArrayManager.create_repr
+      ~SharedMemArrayManager.get_snapshot
+      ~SharedMemArrayManager.load_mem_resource
+      ~SharedMemArrayManager.update_snapshot
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SharedMemArrayManager.data
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.ipc_tools.SharedMemArrayManager.SharedMemArrayManager:
+      .. minigallery:: helios.layouts.ipc_tools.SharedMemArrayManager.SharedMemArrayManager
+         :add-heading:
+   

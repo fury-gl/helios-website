@@ -1,0 +1,29 @@
+helios.backends.fury.tools.Uniform
+==================================
+
+.. currentmodule:: helios.backends.fury.tools
+
+.. autoclass:: Uniform
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Uniform.execute_program
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.backends.fury.tools.Uniform.Uniform:
+      .. minigallery:: helios.backends.fury.tools.Uniform.Uniform
+         :add-heading:
+   

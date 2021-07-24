@@ -1,0 +1,36 @@
+helios.layouts.base.NetworkLayout
+=================================
+
+.. currentmodule:: helios.layouts.base
+
+.. autoclass:: NetworkLayout
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NetworkLayout.steps
+      ~NetworkLayout.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NetworkLayout.positions
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.base.NetworkLayout.NetworkLayout:
+      .. minigallery:: helios.layouts.base.NetworkLayout.NetworkLayout
+         :add-heading:
+   

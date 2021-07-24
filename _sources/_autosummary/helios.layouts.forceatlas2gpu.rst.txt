@@ -1,0 +1,58 @@
+helios.layouts.forceatlas2gpu
+=============================
+
+
+.. automodule:: helios.layouts.forceatlas2gpu
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+  
+   
+   .. autoclass:: ForceAtlas2
+      :members:
+      :show-inheritance:
+      :inherited-members:
+      :special-members: __call__, __add__, __mul__
+      
+         
+      
+      
+         
+      
+       
+      .. _sphx_glr_backref_helios.layouts.ForceAtlas2:
+      .. minigallery:: helios.layouts.ForceAtlas2
+         :add-heading:
+      
+   .. autoclass:: ForceAtlas2ServerCalc
+      :members:
+      :show-inheritance:
+      :inherited-members:
+      :special-members: __call__, __add__, __mul__
+      
+         
+      
+      
+         
+      
+      
+      .. _sphx_glr_backref_helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc:
+      .. minigallery:: helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc
+         :add-heading:
+      
+   
+   
+
+   
+   
+   
+
+
+

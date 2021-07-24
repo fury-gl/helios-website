@@ -1,0 +1,32 @@
+helios.layouts.ipc\_tools.ShmManagerMultiArrays
+===============================================
+
+.. currentmodule:: helios.layouts.ipc_tools
+
+.. autoclass:: ShmManagerMultiArrays
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ShmManagerMultiArrays.add_array
+      ~ShmManagerMultiArrays.cleanup
+      ~ShmManagerMultiArrays.cleanup_mem
+      ~ShmManagerMultiArrays.load_array
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.ipc_tools.ShmManagerMultiArrays.ShmManagerMultiArrays:
+      .. minigallery:: helios.layouts.ipc_tools.ShmManagerMultiArrays.ShmManagerMultiArrays
+         :add-heading:
+   

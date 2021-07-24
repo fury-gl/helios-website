@@ -1,0 +1,37 @@
+helios.backends.fury.actors.FurySuperEdge
+=========================================
+
+.. currentmodule:: helios.backends.fury.actors
+
+.. autoclass:: FurySuperEdge
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FurySuperEdge.start_effects
+      ~FurySuperEdge.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FurySuperEdge.colors
+      ~FurySuperEdge.positions
+   
+   
+   
+      .. _sphx_glr_backref_helios.backends.fury.actors.FurySuperEdge.FurySuperEdge:
+      .. minigallery:: helios.backends.fury.actors.FurySuperEdge.FurySuperEdge
+         :add-heading:
+   

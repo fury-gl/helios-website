@@ -1,0 +1,35 @@
+helios.backends.fury.actors.NetworkSuperActor
+=============================================
+
+.. currentmodule:: helios.backends.fury.actors
+
+.. autoclass:: NetworkSuperActor
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NetworkSuperActor.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NetworkSuperActor.positions
+   
+   
+   
+      .. _sphx_glr_backref_helios.backends.fury.actors.NetworkSuperActor.NetworkSuperActor:
+      .. minigallery:: helios.backends.fury.actors.NetworkSuperActor.NetworkSuperActor
+         :add-heading:
+   

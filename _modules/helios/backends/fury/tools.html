@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.backends.fury.tools &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.backends.fury.tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.backends.fury.tools</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;VTK/FURY Tools</span>
+
+<span class="sd">This module implements a set o tools to enhance VTK given new functionalities.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Uniform"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniform.html#helios.backends.fury.tools.Uniform">[docs]</a><span class="k">class</span> <span class="nc">Uniform</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This creates a uniform shader variable</span>
+
+<span class="sd">    It&#39;s responsible to store the value of a given uniform</span>
+<span class="sd">    variable and call the related vtk_program</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uniform_type</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name: str</span>
+<span class="sd">            name of the uniform variable</span>
+<span class="sd">        uniform_type: str</span>
+<span class="sd">            Uniform variable type which will be used inside the shader.</span>
+<span class="sd">            Any of this are valid: 1fv, 1iv, 2f, 2fv, 2i, 3f, 3fv,</span>
+<span class="sd">                3uc, 4f, 4fv, 4uc, GroupUpdateTime, Matrix,</span>
+<span class="sd">                Matrix3x3, Matrix4x4, Matrix4x4v, f, i</span>
+<span class="sd">                value: float or ndarray</span>
+<span class="sd">        value: type(uniform_type)</span>
+<span class="sd">            should be a value which represent&#39;s the shader uniform</span>
+<span class="sd">            variable. For example, if uniform_type is &#39;f&#39; then value</span>
+<span class="sd">            should be a float; if uniform_type is &#39;3f&#39; then value</span>
+<span class="sd">            should be a 1x3 array.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniform_type</span> <span class="o">=</span> <span class="n">uniform_type</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">valid_types</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;1fv&#39;</span><span class="p">,</span> <span class="s1">&#39;1iv&#39;</span><span class="p">,</span> <span class="s1">&#39;2f&#39;</span><span class="p">,</span> <span class="s1">&#39;2fv&#39;</span><span class="p">,</span> <span class="s1">&#39;2i&#39;</span><span class="p">,</span> <span class="s1">&#39;3f&#39;</span><span class="p">,</span> <span class="s1">&#39;3fv&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;3uc&#39;</span><span class="p">,</span> <span class="s1">&#39;4f&#39;</span><span class="p">,</span> <span class="s1">&#39;4fv&#39;</span><span class="p">,</span> <span class="s1">&#39;4uc&#39;</span><span class="p">,</span> <span class="s1">&#39;GroupUpdateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;Matrix&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Matrix3x3&#39;</span><span class="p">,</span> <span class="s1">&#39;Matrix4x4&#39;</span><span class="p">,</span> <span class="s1">&#39;Matrix4x4v&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniform_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">valid_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Uniform type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uniform_type</span><span class="si">}</span><span class="s2"> not valid.</span>
+<span class="s2">                Choose one of this values: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">valid_types</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_func_uniform</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;SetUniform</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uniform_type</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<div class="viewcode-block" id="Uniform.execute_program"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniform.html#helios.backends.fury.tools.Uniform.execute_program">[docs]</a>    <span class="k">def</span> <span class="nf">execute_program</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Given a shader program, this method</span>
+<span class="sd">        will update the value with the associated uniform variable</span>
+<span class="sd">        in a draw call</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        program: vtkmodules.vtkRenderingOpenGL2.vtkShaderProgram</span>
+<span class="sd">            A shader program which will be used to update the uniform</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">program</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_func_uniform</span><span class="p">)(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Uniform(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s1">)&#39;</span></div>
+
+
+<div class="viewcode-block" id="Uniforms"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniforms.html#helios.backends.fury.tools.Uniforms">[docs]</a><span class="k">class</span> <span class="nc">Uniforms</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uniforms</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates an object which store and execute an uniform variable.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        uniforms: list</span>
+<span class="sd">            List of Uniform objects.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+
+<span class="sd">        .. highlight:: python</span>
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            uniforms = [</span>
+<span class="sd">                Uniform(name=&#39;edgeWidth&#39;, uniform_type=&#39;f&#39;, value=edgeWidth)...</span>
+<span class="sd">            ]</span>
+<span class="sd">            CustomUniforms = Uniforms(markerUniforms)</span>
+<span class="sd">            add_shader_callback(</span>
+<span class="sd">                    sq_actor, CustomUniforms)</span>
+<span class="sd">            sq_actor.CustomUniforms = CustomUniforms</span>
+<span class="sd">            sq_actor.CustomUniforms.edgeWidth = 0.5</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniforms</span> <span class="o">=</span> <span class="n">uniforms</span>
+        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniforms</span><span class="p">:</span>
+            <span class="c1"># if isinstance(obj, Uniform) is False:</span>
+            <span class="c1">#    raise ValueError(f&quot;&quot;&quot;{obj} it&#39;s not an Uniform object&quot;&quot;&quot;)</span>
+
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Uniforms.__call__"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniforms.html#helios.backends.fury.tools.Uniforms.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_caller</span><span class="p">,</span> <span class="n">_event</span><span class="p">,</span> <span class="n">calldata</span><span class="o">=</span><span class="kc">None</span><span class="p">,):</span>
+        <span class="sd">&quot;&quot;&quot;This method should be used as a callback for a vtk Observer</span>
+
+<span class="sd">        Execute the shader program with the given uniform variables.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">program</span> <span class="o">=</span> <span class="n">calldata</span>
+        <span class="k">if</span> <span class="n">program</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">uniform</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniforms</span><span class="p">:</span>
+            <span class="n">uniform</span><span class="o">.</span><span class="n">execute_program</span><span class="p">(</span><span class="n">program</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Uniforms(</span><span class="si">{</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniforms</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

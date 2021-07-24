@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.backends.fury.draw &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.backends.fury.draw</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.backends.fury.draw</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;FURY NetworkDraw</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">fury</span> <span class="kn">import</span> <span class="n">window</span>
+
+<span class="kn">from</span> <span class="nn">helios.backends.fury.actors</span> <span class="kn">import</span> <span class="n">NetworkSuperActor</span>
+
+
+<div class="viewcode-block" id="NetworkDraw"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.draw.html#helios.backends.fury.draw.NetworkDraw">[docs]</a><span class="k">class</span> <span class="nc">NetworkDraw</span><span class="p">(</span><span class="n">NetworkSuperActor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This object is responsible to deal with the drawing of the network.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">        showm : ShowManager</span>
+<span class="sd">            A ShowManager instance from FURY</span>
+<span class="sd">            `fury.gl/fury.window.html#showmanager &lt;https://fury.gl/latest/reference/fury.window.html#showmanager&gt;`_</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">positions</span><span class="p">,</span>
+        <span class="n">edges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">scales</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+        <span class="n">node_edge_width</span><span class="o">=.</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">node_opacity</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span>
+        <span class="n">node_edge_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">node_edge_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+        <span class="n">edge_line_color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">edge_line_opacity</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">edge_line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">better_performance</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">write_frag_depth</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span>
+        <span class="n">showm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span>
+
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        positions : ndarray</span>
+<span class="sd">            Array of the nodes positions.</span>
+<span class="sd">        edges : ndarray, optional</span>
+<span class="sd">            Array of the edges.</span>
+<span class="sd">        colors : tuple or ndarray, optional</span>
+<span class="sd">            Tuple of the colors of the nodes.</span>
+<span class="sd">        scales : float or ndarray, optional</span>
+<span class="sd">            Scaling factor for the node.</span>
+<span class="sd">        marker : str or list, optional</span>
+<span class="sd">            Marker for the nodes.</span>
+<span class="sd">        node_edge_width : float or array, optional</span>
+<span class="sd">            Width of the edges around the nodes.</span>
+<span class="sd">        node_opacity : float or array, optional</span>
+<span class="sd">            Opacity of the nodes.</span>
+<span class="sd">        node_edge_opacity : float or array, optional</span>
+<span class="sd">            Opacity of the edges.</span>
+<span class="sd">        node_edge_color : tuple or ndarray, optional</span>
+<span class="sd">            Color of the edges around the nodes.</span>
+<span class="sd">        edge_line_color : tuple or ndarray, optional</span>
+<span class="sd">            Color of the edges.</span>
+<span class="sd">        edge_line_opacity : float or ndarray, optional</span>
+<span class="sd">            Opacity of the edges.</span>
+<span class="sd">        edge_line_width : float or ndarray, optional</span>
+<span class="sd">            Width of the edges.</span>
+<span class="sd">        better_performance : bool, optional</span>
+<span class="sd">            Improves the performance of the draw function.</span>
+<span class="sd">        write_frag_depth : bool, optional</span>
+<span class="sd">            Writes in the depth buffer.</span>
+<span class="sd">        window_size : tuple, optional</span>
+<span class="sd">            Size of the window.</span>
+<span class="sd">        showm : ShowManager, optional</span>
+<span class="sd">            Fury ShowManager instance.</span>
+<span class="sd">            `fury.gl/fury.window.html#showmanager &lt;https://fury.gl/latest/reference/fury.window.html#showmanager&gt;`_</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">better_performance</span><span class="p">:</span>
+            <span class="n">write_frag_depth</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">positions</span><span class="p">,</span>
+            <span class="n">edges</span><span class="p">,</span>
+            <span class="n">colors</span><span class="p">,</span>
+            <span class="n">scales</span><span class="p">,</span>
+            <span class="n">marker</span><span class="p">,</span>
+            <span class="n">node_edge_width</span><span class="p">,</span>
+            <span class="n">node_opacity</span><span class="p">,</span>
+            <span class="n">node_edge_opacity</span><span class="p">,</span>
+            <span class="n">node_edge_color</span><span class="p">,</span>
+            <span class="n">edge_line_color</span><span class="p">,</span>
+            <span class="n">edge_line_opacity</span><span class="p">,</span>
+            <span class="n">edge_line_width</span><span class="p">,</span>
+            <span class="n">write_frag_depth</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vtk_actors</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_2d</span><span class="p">:</span>
+            <span class="n">interactor_style</span> <span class="o">=</span> <span class="s1">&#39;image&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">SetBackground</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">interactor_style</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span>
+        <span class="k">if</span> <span class="n">showm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">showm</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">ShowManager</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="p">,</span>
+                <span class="n">size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span>
+                <span class="n">interactor_style</span><span class="o">=</span><span class="n">interactor_style</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">showm</span> <span class="o">=</span> <span class="n">showm</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iren</span> <span class="o">=</span> <span class="n">showm</span><span class="o">.</span><span class="n">iren</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">showm</span><span class="o">.</span><span class="n">window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Render</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">showm</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Render</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">showm</span><span class="o">.</span><span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">showm</span><span class="o">.</span><span class="n">initialize</span>
+
+<div class="viewcode-block" id="NetworkDraw.refresh"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.draw.html#helios.backends.fury.draw.NetworkDraw.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This will refresh the FURY window instance.</span>
+
+<span class="sd">        Call this method every time that you change any property in the</span>
+<span class="sd">        network like positions, colors etc</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Render</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">Render</span><span class="p">()</span></div></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

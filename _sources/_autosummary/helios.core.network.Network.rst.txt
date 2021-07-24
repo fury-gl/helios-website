@@ -1,0 +1,39 @@
+helios.core.network.Network
+===========================
+
+.. currentmodule:: helios.core.network
+
+.. autoclass:: Network
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Network.add_edges
+      ~Network.add_vertices
+      ~Network.delete_edges
+      ~Network.delete_vertices
+      ~Network.edge_count
+      ~Network.edge_properties
+      ~Network.edges
+      ~Network.neighbors_of_vertex
+      ~Network.vertex_count
+      ~Network.vertex_properties
+      ~Network.vertices
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.core.network.Network.Network:
+      .. minigallery:: helios.core.network.Network.Network
+         :add-heading:
+   

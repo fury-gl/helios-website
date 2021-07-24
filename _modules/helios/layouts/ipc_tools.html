@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.layouts.ipc_tools &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.layouts.ipc_tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.layouts.ipc_tools</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Inter-Process communication tools</span>
+
+<span class="sd">This Module provides abstract classes and objects to deal with inter-process</span>
+<span class="sd">communication.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">    [1]“Python GSoC - Post #3: Network layout algorithms using IPC -</span>
+<span class="sd">    demvessias’s Blog.”</span>
+<span class="sd">    `blogs.python-gsoc.org/en/demvessiass-blog/post-3</span>
+<span class="sd">    &lt;https://blogs.python-gsoc.org/en/demvessiass-blog/post-3-network-layout-algorithms-using-ipc/&gt;`_ </span>
+<span class="sd">    (accessed Jul. 24, 2021).</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">minor</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">shared_memory</span>
+    <span class="n">PY_VERSION_8</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">shared_memory</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">PY_VERSION_8</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<div class="viewcode-block" id="GenericArrayBufferManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.GenericArrayBufferManager.html#helios.layouts.ipc_tools.GenericArrayBufferManager">[docs]</a><span class="k">class</span> <span class="nc">GenericArrayBufferManager</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This implements a abstract (generic) ArrayBufferManager.</span>
+
+<span class="sd">    The GenericArrayBufferManager is used for example to share the</span>
+<span class="sd">    positions, edges and weights between different process.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="n">num_elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dimension : int</span>
+<span class="sd">        dtype : dtype</span>
+<span class="sd">        num_elements : int, optional</span>
+<span class="sd">            In MacOs a shared memory resource can be created with</span>
+<span class="sd">            a different number of elements then the original data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span> <span class="o">=</span> <span class="n">dtype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span> <span class="o">=</span> <span class="n">dimension</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_elements</span> <span class="o">=</span> <span class="n">num_elements</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="SharedMemArrayManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.SharedMemArrayManager.html#helios.layouts.ipc_tools.SharedMemArrayManager">[docs]</a><span class="k">class</span> <span class="nc">SharedMemArrayManager</span><span class="p">(</span><span class="n">GenericArrayBufferManager</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An implementation of a GenericArrayBufferManager using SharedMemory</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>  <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">num_elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dimension : int</span>
+<span class="sd">            number of columns</span>
+<span class="sd">        dtype : str</span>
+<span class="sd">            type of the ndarray</span>
+<span class="sd">        data : ndarray</span>
+<span class="sd">            bi-dimensional array</span>
+<span class="sd">        buffer_name : str</span>
+<span class="sd">            buffer_name, if you pass that, then</span>
+<span class="sd">            this Obj. will try to load the memory resource</span>
+<span class="sd">        num_elements : int, optional</span>
+<span class="sd">            In MacOs a shared memory resource can be created with</span>
+<span class="sd">            a different number of elements then the original data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">num_elements</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_released</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">buffer_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">(</span><span class="n">buffer_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_elements</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+                        <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_repr</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buffer_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">buffer_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_repr</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s_bytes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span><span class="p">)</span><span class="o">.</span><span class="n">nbytes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_elements_buffer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="n">s_bytes</span><span class="o">//</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_elements_buffer</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_elements_buffer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                    <span class="n">shape</span><span class="p">,</span>
+                    <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span><span class="p">,</span>
+                    <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_released</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="c1"># this it&#39;s due the python core issues</span>
+        <span class="c1"># https://bugs.python.org/issue38119</span>
+        <span class="c1"># https://bugs.python.org/issue39959</span>
+        <span class="c1"># https://github.com/luizalabs/shared-memory-dict/issues/13</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shared Memory </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="se">\</span>
+<span class="s1">                        File not found&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_released</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_elements</span><span class="p">]</span>
+
+    <span class="nd">@data</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">equal_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">equal_dim</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">equal_dim</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">step</span><span class="o">*</span><span class="n">size</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">step</span><span class="o">*</span><span class="n">size</span> <span class="o">+</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dtype</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">step</span><span class="o">*</span><span class="n">size</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="p">(</span><span class="n">step</span><span class="o">*</span><span class="n">size</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="ShmManagerMultiArrays"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays">[docs]</a><span class="k">class</span> <span class="nc">ShmManagerMultiArrays</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This Obj. allows to deal with multiple arrays</span>
+<span class="sd">        stored using SharedMemory</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="ShmManagerMultiArrays.add_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.add_array">[docs]</a>    <span class="k">def</span> <span class="nf">add_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This creates a shared memory resource</span>
+<span class="sd">        to store the data.</span>
+
+<span class="sd">        The shared memory obj will be accessible</span>
+<span class="sd">        through</span>
+
+<span class="sd">        &gt;&gt;&gt; self.attr_name</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        attr_name: str</span>
+<span class="sd">            used to associate a new attribute &#39;attr_name&#39;</span>
+<span class="sd">            with the current (self) ShmManagerMultiArrays.</span>
+<span class="sd">        data : ndarray</span>
+<span class="sd">        dimension : int</span>
+<span class="sd">        dtype : str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">attr_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A Shared Memory array with the name </span><span class="si">{</span><span class="n">attr_name</span><span class="si">}</span><span class="se">\</span>
+<span class="s1">                is already in this ShmManager&#39;</span><span class="p">)</span>
+        <span class="n">_shm</span> <span class="o">=</span> <span class="n">SharedMemArrayManager</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">),</span> <span class="n">dimension</span><span class="o">=</span><span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr_name</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">_shm</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ShmManagerMultiArrays.load_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.load_array">[docs]</a>    <span class="k">def</span> <span class="nf">load_array</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">buffer_name</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span>
+            <span class="n">num_elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This will load the shared memory resource associate with buffer_name</span>
+<span class="sd">        into the current ShmManagerMultiArrays</span>
+<span class="sd">        The shared memory obj will be accessible</span>
+<span class="sd">        through</span>
+
+<span class="sd">        &gt;&gt;&gt; self.attr_name</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        attr_name : str</span>
+<span class="sd">            this name will be used to associate a new attribute &#39;attr_name&#39;</span>
+<span class="sd">            with the current (self) ShmManagerMultiArrays.</span>
+<span class="sd">        buffer_name : str</span>
+<span class="sd">        dimension : int</span>
+<span class="sd">        dtype : str</span>
+<span class="sd">        num_elements : int, optional</span>
+<span class="sd">            In MacOs a shared memory resource can be created with</span>
+<span class="sd">            a different number of elements then the original data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">attr_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A Shared Memory array with the name </span><span class="si">{</span><span class="n">attr_name</span><span class="si">}</span><span class="se">\</span>
+<span class="s1">                is already in this ShmManager&#39;</span><span class="p">)</span>
+        <span class="n">_shm</span> <span class="o">=</span> <span class="n">SharedMemArrayManager</span><span class="p">(</span>
+            <span class="n">buffer_name</span><span class="o">=</span><span class="n">buffer_name</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+            <span class="n">num_elements</span><span class="o">=</span><span class="n">num_elements</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr_name</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">_shm</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">cleanup_mem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">resource_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="p">:</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">)</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">resource_name</span><span class="p">)</span>
+            <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">resource_name</span><span class="si">}</span><span class="s1"> is not in this ShmManager&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">_shm_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="p">:</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_shm_name</span><span class="p">)</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1137 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fury.stream.tools &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>fury.stream.tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for fury.stream.tools</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Timer</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">minor</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">shared_memory</span>
+    <span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">resource_tracker</span>
+    <span class="n">PY_VERSION_8</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">shared_memory</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">PY_VERSION_8</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">cv2</span>
+    <span class="n">OPENCV_AVAILABLE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+    <span class="kn">import</span> <span class="nn">io</span>
+    <span class="n">cv2</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">OPENCV_AVAILABLE</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">remove_shm_from_resource_tracker</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Monkey-patch multiprocessing.resource_tracker so SharedMemory won&#39;t</span>
+<span class="sd">    be tracked</span>
+<span class="sd">    More details at: https://bugs.python.org/issue38119</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">fix_register</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rtype</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rtype</span> <span class="o">==</span> <span class="s2">&quot;shared_memory&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">return</span> <span class="n">resource_tracker</span><span class="o">.</span><span class="n">_resource_tracker</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rtype</span><span class="p">)</span>
+    <span class="n">resource_tracker</span><span class="o">.</span><span class="n">register</span> <span class="o">=</span> <span class="n">fix_register</span>
+
+    <span class="k">def</span> <span class="nf">fix_unregister</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rtype</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rtype</span> <span class="o">==</span> <span class="s2">&quot;shared_memory&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">return</span> <span class="n">resource_tracker</span><span class="o">.</span><span class="n">_resource_tracker</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rtype</span><span class="p">)</span>
+    <span class="n">resource_tracker</span><span class="o">.</span><span class="n">unregister</span> <span class="o">=</span> <span class="n">fix_unregister</span>
+
+    <span class="k">if</span> <span class="s2">&quot;shared_memory&quot;</span> <span class="ow">in</span> <span class="n">resource_tracker</span><span class="o">.</span><span class="n">_CLEANUP_FUNCS</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">resource_tracker</span><span class="o">.</span><span class="n">_CLEANUP_FUNCS</span><span class="p">[</span><span class="s2">&quot;shared_memory&quot;</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">GenericMultiDimensionalBuffer</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a abstract (generic) multidimensional buffer.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="n">max_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">=</span> <span class="n">dimension</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span>
+
+    <span class="nd">@buffer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">generic</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;float64&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">get_start_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">idx</span><span class="o">*</span><span class="n">dim</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">dim</span><span class="o">*</span><span class="p">(</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_start_end</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dequeue start </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">ts</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">*</span><span class="mi">1000</span>
+
+        <span class="n">itens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+        <span class="n">te</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">*</span><span class="mi">1000</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dequeue frombuffer cost </span><span class="si">{</span><span class="n">te</span><span class="o">-</span><span class="n">ts</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">itens</span>
+
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_start_end</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">generic</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;float64&#39;</span><span class="p">:</span>
+                <span class="c1"># if end - start == self.dimension and start &gt;= 0 and end &gt;= 0:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">RawArrayMultiDimensionalBuffer</span><span class="p">(</span><span class="n">GenericMultiDimensionalBuffer</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a  multidimensional buffer with RawArray.</span>
+<span class="sd">        Stream system uses that to implemenet the CircularQueue</span>
+<span class="sd">        with shared memory resources.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">        buffer : buffer, optional</span>
+<span class="sd">            If buffer is not passed to __init__</span>
+<span class="sd">            then the multidimensional buffer obj will create a new</span>
+<span class="sd">            RawArray object to store the data</span>
+<span class="sd">            If buffer is passed than this Obj will read a</span>
+<span class="sd">            a already created RawArray</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">buffer</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">buffer_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+        <span class="n">buffer</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">RawArray</span><span class="p">(</span>
+                <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">buffer_arr</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">buffer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">)</span><span class="o">//</span><span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">SharedMemMultiDimensionalBuffer</span><span class="p">(</span><span class="n">GenericMultiDimensionalBuffer</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a generic multidimensional buffer</span>
+<span class="sd">        with SharedMemory. Stream system uses that to implemenet the</span>
+<span class="sd">        CircularQueue with shared memory resources.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">        buffer_name : str, optional</span>
+<span class="sd">            if buffer_name is passed than this Obj will read a</span>
+<span class="sd">            a already created SharedMemory</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">buffer_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer_name</span> <span class="o">=</span> <span class="n">buffer_name</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">buffer_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+                    <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">buffer_arr</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+
+        <span class="c1"># Some OSx versions has a minimum shared memory block size</span>
+        <span class="c1"># of 4096 bytes. Therefore, we must update this value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="o">//</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">([</span>
+            <span class="s1">&#39;create repr multidimensional buffer &#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;max size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span>
+        <span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buffer_name</span><span class="p">)</span>
+        <span class="c1"># 8 represents 8 bytes of float64</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="o">//</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span>
+        <span class="c1"># self.max_size = int(len(self._buffer.buf)//self.dimension/8)</span>
+        <span class="c1"># self.max_size -= 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">([</span>
+            <span class="s1">&#39;load repr multidimensional buffer&#39;</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;max size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span>
+        <span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="c1"># this it&#39;s due the python core issues</span>
+            <span class="c1"># https://bugs.python.org/issue38119</span>
+            <span class="c1"># https://bugs.python.org/issue39959</span>
+            <span class="c1"># https://github.com/luizalabs/shared-memory-dict/issues/13</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Shared Memory </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">buffer_name</span><span class="si">}</span><span class="s1">(queue_event_buffer)</span><span class="se">\</span>
+<span class="s1">                    File not found&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">GenericCircularQueue</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+            <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a generic circular queue which works with</span>
+<span class="sd">        shared memory resources.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory. This will be used to construct the</span>
+<span class="sd">            multidimensional buffer</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">            This will be used to construct the multidimensional buffer</span>
+<span class="sd">        use_shared_mem : bool, default False</span>
+<span class="sd">            If the multidimensional memory resource should create or read</span>
+<span class="sd">            using SharedMemory or RawArrays</span>
+<span class="sd">        buffer : RawArray, optional</span>
+<span class="sd">        buffer_name: str, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span> <span class="o">=</span> <span class="n">use_shared_mem</span>
+        <span class="k">if</span> <span class="n">use_shared_mem</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">SharedMemMultiDimensionalBuffer</span><span class="p">(</span>
+                <span class="n">max_size</span><span class="o">=</span><span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="n">dimension</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">buffer_name</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">RawArrayMultiDimensionalBuffer</span><span class="p">(</span>
+                <span class="n">max_size</span><span class="o">=</span><span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="n">dimension</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">buffer</span>
+            <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">get_obj</span><span class="p">(),</span> <span class="s1">&#39;int64&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@head</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">get_obj</span><span class="p">(),</span> <span class="s1">&#39;int64&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="nd">@tail</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">set_head_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">,</span> <span class="n">lock</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_enqueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">max_size</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">):</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_head_tail</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">max_size</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">ok</span>
+
+    <span class="k">def</span> <span class="nf">_dequeue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">interactions</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">:</span>
+                <span class="n">interactions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">max_size</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">interactions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_head_tail</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">interactions</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">enqueue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">dequeue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">ArrayCircularQueue</span><span class="p">(</span><span class="n">GenericCircularQueue</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+            <span class="n">head_tail_buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a MultiDimensional Queue which works with</span>
+<span class="sd">        Arrays and RawArrays. Stream system uses that to implement</span>
+<span class="sd">        user interactions</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory. This will be used to construct the</span>
+<span class="sd">            multidimensional buffer</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">            This will be used to construct the multidimensional buffer</span>
+<span class="sd">        head_tail_buffer : buffer, optional</span>
+<span class="sd">            If buffer is not passed to __init__</span>
+<span class="sd">            then this obj will create a new</span>
+<span class="sd">            RawArray to store head and tail position.</span>
+<span class="sd">        buffer : buffer, optional</span>
+<span class="sd">            If buffer  is not passed to __init__</span>
+<span class="sd">            then the multidimensional buffer obj will create a new</span>
+<span class="sd">            RawArray to store the data</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">buffer</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">head_tail_buffer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span> <span class="o">=</span> <span class="n">head_tail_buffer</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_head_tail</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># head_tail_arr[0] int; head position</span>
+        <span class="c1"># head_tail_arr[1] int; tail position</span>
+        <span class="n">head_tail_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Array</span><span class="p">(</span>
+                    <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="n">head_tail_arr</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">enqueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">get_lock</span><span class="p">():</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enqueue</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ok</span>
+
+    <span class="k">def</span> <span class="nf">dequeue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">get_lock</span><span class="p">():</span>
+            <span class="n">interactions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dequeue</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">interactions</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">SharedMemCircularQueue</span><span class="p">(</span><span class="n">GenericCircularQueue</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+            <span class="n">head_tail_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a MultiDimensional Queue which works with</span>
+<span class="sd">        SharedMemory.</span>
+<span class="sd">        Stream system uses that to implemenet user interactions</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_size : int, optional</span>
+<span class="sd">            If buffer_name or buffer was not passed then max_size</span>
+<span class="sd">            it&#39;s mandatory. This will be used to construct the</span>
+<span class="sd">            multidimensional buffer</span>
+<span class="sd">        dimension : int, default 8</span>
+<span class="sd">            This will be used to construct the multidimensional buffer</span>
+<span class="sd">        head_tail_buffer_name : str, optional</span>
+<span class="sd">            if buffer_name is passed than this Obj will read a</span>
+<span class="sd">            a already created SharedMemory with the head and tail</span>
+<span class="sd">            informations</span>
+<span class="sd">        buffer_name : str, optional</span>
+<span class="sd">            if buffer_name is passed than this Obj will read a</span>
+<span class="sd">            a already created SharedMemory to create the MultiDimensionalBuffer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">max_size</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">buffer_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">head_tail_buffer_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span> <span class="o">=</span> <span class="n">head_tail_buffer_name</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">([</span>
+            <span class="s1">&#39;create shared mem&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;size repr&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
+            <span class="s1">&#39;size buffer&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span>
+        <span class="p">])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_head_tail</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># head_tail_arr[0] int; head position</span>
+        <span class="c1"># head_tail_arr[1] int; tail position</span>
+        <span class="n">head_tail_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+                <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">head_tail_arr</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">is_unlocked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_repr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">enqueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_unlocked</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enqueue</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ok</span>
+
+    <span class="k">def</span> <span class="nf">dequeue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">interactions</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_unlocked</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+            <span class="n">interactions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dequeue</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">interactions</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="c1"># this it&#39;s due the python core issues</span>
+            <span class="c1"># https://bugs.python.org/issue38119</span>
+            <span class="c1"># https://bugs.python.org/issue39959</span>
+            <span class="c1"># https://github.com/luizalabs/shared-memory-dict/issues/13</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Shared Memory </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">head_tail_buffer_name</span><span class="si">}</span><span class="s1">(head_tail)</span><span class="se">\</span>
+<span class="s1">                     File not found&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">GenericImageBufferManager</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">max_window_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_buffers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements a abstract (generic) ImageBufferManager with</span>
+<span class="sd">        the n-buffer techinique.</span>
+
+<span class="sd">       Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_window_size : tuple of ints, optional</span>
+<span class="sd">                This allows resize events inside of the FURY window instance.</span>
+<span class="sd">                Should be greater than the window size.</span>
+<span class="sd">        num_buffers : int, optional</span>
+<span class="sd">                Number of buffers to be used in the n-buffering</span>
+<span class="sd">                techinique.</span>
+<span class="sd">        use_shared_mem: bool, default False</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span> <span class="o">=</span> <span class="n">max_window_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span> <span class="o">=</span> <span class="n">num_buffers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_size</span> <span class="o">=</span> <span class="n">num_buffers</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span> <span class="o">=</span> <span class="n">use_shared_mem</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># int</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_components</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_names</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">next_buffer_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">index</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buffer_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">index</span>
+
+    <span class="k">def</span> <span class="nf">write_into</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">np_arr</span><span class="p">):</span>
+        <span class="n">buffer_size</span> <span class="o">=</span> <span class="n">buffer_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">next_buffer_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_buffer_index</span>
+        <span class="k">if</span> <span class="n">buffer_size</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="p">[</span>
+                <span class="n">next_buffer_index</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">np_arr</span>
+        <span class="k">elif</span> <span class="n">buffer_size</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="p">[</span>
+                    <span class="n">next_buffer_index</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">buffer_size</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">np_arr</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rand_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+                <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="p">[</span>
+                <span class="c1"># next_buffer_index][0:self.max_size*3] = rand_img</span>
+                <span class="n">next_buffer_index</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">rand_img</span>
+
+            <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="n">next_buffer_index</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="n">next_buffer_index</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_buffer_index</span>
+
+    <span class="k">def</span> <span class="nf">get_current_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_buffer</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span><span class="p">:</span>
+            <span class="n">image_info</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="p">,</span> <span class="s1">&#39;uint32&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span>
+
+        <span class="n">buffer_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_info</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="n">buffer_index</span><span class="o">*</span><span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_info</span><span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="n">buffer_index</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="p">[</span><span class="n">buffer_index</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_repr</span> <span class="o">=</span> <span class="n">image</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">image</span>
+
+    <span class="k">def</span> <span class="nf">get_jpeg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_current_frame</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_use_shared_mem</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+                <span class="n">image</span><span class="p">,</span> <span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">width</span><span class="o">*</span><span class="n">height</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="c1"># preserve width and height, flip B-&gt;R</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">OPENCV_AVAILABLE</span><span class="p">:</span>
+            <span class="n">image_encoded</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imencode</span><span class="p">(</span><span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="n">image</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">bytes_img</span> <span class="o">=</span> <span class="n">image_encoded</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image_encoded</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+            <span class="n">bytes_img_data</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
+            <span class="n">image_encoded</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">bytes_img_data</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpeg&#39;</span><span class="p">)</span>
+            <span class="n">bytes_img</span> <span class="o">=</span> <span class="n">bytes_img_data</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">bytes_img</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">async_get_jpeg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">33</span><span class="p">):</span>
+        <span class="n">jpeg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_jpeg</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">ms</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">jpeg</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">RawArrayImageBufferManager</span><span class="p">(</span><span class="n">GenericImageBufferManager</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">max_window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">num_buffers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">image_buffers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">info_buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements an ImageBufferManager using RawArrays.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_window_size : tuple of ints, optional</span>
+<span class="sd">                This allows resize events inside of the FURY window instance.</span>
+<span class="sd">                Should be greater than the window size.</span>
+<span class="sd">        num_buffers : int, optional</span>
+<span class="sd">                Number of buffers to be used in the n-buffering</span>
+<span class="sd">                techinique.</span>
+<span class="sd">        info_buffer : buffer, optional</span>
+<span class="sd">            A buffer with the information about the current</span>
+<span class="sd">            frame to be streamed and the respective sizes</span>
+<span class="sd">        image_buffers : list of buffers, optional</span>
+<span class="sd">            A list of buffers with each one containing a frame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">max_window_size</span><span class="p">,</span> <span class="n">num_buffers</span><span class="p">,</span> <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">image_buffers</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">info_buffer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span> <span class="o">=</span> <span class="n">image_buffers</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="n">info_buffer</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_components</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span><span class="p">):</span>
+            <span class="n">buffer</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">RawArray</span><span class="p">(</span>
+                <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+                    <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>
+                    <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span>
+
+        <span class="c1"># info_list stores the information about the n frame buffers</span>
+        <span class="c1"># as well the respectives sizes.</span>
+        <span class="c1"># 0 number of components</span>
+        <span class="c1"># 1 id buffer</span>
+        <span class="c1"># 2, 3, width first buffer, height first buffer</span>
+        <span class="c1"># 4, 5, width second buffer , height second buffer</span>
+        <span class="n">info_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span><span class="p">):</span>
+            <span class="n">info_list</span> <span class="o">+=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="n">info_list</span> <span class="o">+=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">info_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="n">info_list</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">RawArray</span><span class="p">(</span>
+                <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">info_list</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint64&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="p">,</span> <span class="s1">&#39;uint64&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">img_buffer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">img_buffer</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">SharedMemImageBufferManager</span><span class="p">(</span><span class="n">GenericImageBufferManager</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">max_window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">num_buffers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">image_buffer_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">info_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This implements an ImageBufferManager using the</span>
+<span class="sd">        SharedMemory approach. Python &gt;=3.8 is a requirement</span>
+<span class="sd">        to use this object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        max_window_size : tuple of ints, optional</span>
+<span class="sd">                This allows resize events inside of the FURY window instance.</span>
+<span class="sd">                Should be greater than the window size.</span>
+<span class="sd">        num_buffers : int, optional</span>
+<span class="sd">                Number of buffers to be used in the n-buffering</span>
+<span class="sd">                techinique.</span>
+<span class="sd">        info_buffer_name : str</span>
+<span class="sd">            The name of a buffer with the information about the current</span>
+<span class="sd">            frame to be streamed and the respective sizes</span>
+<span class="sd">        image_buffer_names : list of str, optional</span>
+<span class="sd">            a list of buffer names. Each buffer contains a frame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">max_window_size</span><span class="p">,</span> <span class="n">num_buffers</span><span class="p">,</span> <span class="n">use_shared_mem</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">image_buffer_names</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">info_buffer_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_mem_resource</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_names</span> <span class="o">=</span> <span class="n">image_buffer_names</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_name</span> <span class="o">=</span> <span class="n">info_buffer_name</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_created</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_mem_resource</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_components</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span><span class="p">):</span>
+            <span class="n">buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+                        <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="n">info_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buffers</span><span class="p">):</span>
+            <span class="n">info_list</span> <span class="o">+=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="n">info_list</span> <span class="o">+=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_window_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">info_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="n">info_list</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span>
+            <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">info_list</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span><span class="p">,</span>
+                <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">([</span>
+            <span class="s1">&#39;info buffer create&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;buffer size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
+            <span class="s1">&#39;repr size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="o">.</span><span class="n">shape</span>
+        <span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">load_mem_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span><span class="p">,</span>
+                <span class="n">buffer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">([</span>
+            <span class="s1">&#39;info buffer load&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;buffer size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
+            <span class="s1">&#39;repr size&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_repr</span><span class="o">.</span><span class="n">shape</span>
+        <span class="p">])</span>
+        <span class="k">for</span> <span class="n">buffer_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_names</span><span class="p">:</span>
+            <span class="n">buffer</span> <span class="o">=</span> <span class="n">shared_memory</span><span class="o">.</span><span class="n">SharedMemory</span><span class="p">(</span><span class="n">buffer_name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">image_reprs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+                <span class="n">buffer</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span>
+                <span class="n">buffer</span><span class="o">=</span><span class="n">buffer</span><span class="o">.</span><span class="n">buf</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="c1"># this it&#39;s due the python core issues</span>
+        <span class="c1"># https://bugs.python.org/issue38119</span>
+        <span class="c1"># https://bugs.python.org/issue39959</span>
+        <span class="c1"># https://github.com/luizalabs/shared-memory-dict/issues/13</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">info_buffer</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shared Memory </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">info_buffer_name</span><span class="si">}</span><span class="se">\</span>
+<span class="s1">                        (info_buffer) File not found&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">image_buffers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_buffer_names</span><span class="p">):</span>
+            <span class="n">buffer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">buffer</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+                <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shared Memory </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">(buffer image) File not found&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="IntervalTimer"><a class="viewcode-back" href="../../../reference/helios.layouts.html#helios.layouts.base.IntervalTimer">[docs]</a><span class="k">class</span> <span class="nc">IntervalTimer</span><span class="p">:</span>
+<div class="viewcode-block" id="IntervalTimer.__init__"><a class="viewcode-back" href="../../../reference/helios.layouts.html#helios.layouts.base.IntervalTimer.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Implements a object with the same behavior of setInterval from Js</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        seconds : float</span>
+<span class="sd">            A postive float number. Represents the total amount of</span>
+<span class="sd">            seconds between each call</span>
+<span class="sd">        callback : function</span>
+<span class="sd">            The function to be called</span>
+<span class="sd">        *args : args</span>
+<span class="sd">            args to be passed to callback</span>
+<span class="sd">        **kwargs : kwargs</span>
+<span class="sd">            kwargs to be passed to callback</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        -------</span>
+<span class="sd">        &gt;&gt;&gt; def callback(arr):</span>
+<span class="sd">        &gt;&gt;&gt;    arr += [len(arr)]</span>
+<span class="sd">        &gt;&gt;&gt; arr = []</span>
+<span class="sd">        &gt;&gt;&gt; interval_timer = tools.IntervalTimer(1, callback, arr)</span>
+<span class="sd">        &gt;&gt;&gt; interval_timer.start()</span>
+<span class="sd">        &gt;&gt;&gt; time.sleep(5)</span>
+<span class="sd">        &gt;&gt;&gt; interval_timer.stop()</span>
+<span class="sd">        &gt;&gt;&gt; # len(arr) == 5</span>
+
+<span class="sd">        Refs</span>
+<span class="sd">        ----</span>
+<span class="sd">        I got this from</span>
+<span class="sd">        https://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seconds</span> <span class="o">=</span> <span class="n">seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">callback</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># self.next_call = time.time()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="IntervalTimer.start"><a class="viewcode-back" href="../../../reference/helios.layouts.html#helios.layouts.base.IntervalTimer.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seconds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">)</span>
+
+            <span class="c1"># self.next_call += selfseconds.</span>
+            <span class="c1"># self._timer = Timer(self.next_call - time.time(), self._run)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="IntervalTimer.stop"><a class="viewcode-back" href="../../../reference/helios.layouts.html#helios.layouts.base.IntervalTimer.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timer</span> <span class="o">=</span> <span class="kc">None</span></div></div>
+            <span class="c1"># self._timer.join()</span>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

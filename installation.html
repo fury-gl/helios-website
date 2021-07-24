@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installation &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Visual Aspects" href="getting_started_visual_aspects.html" />
+    <link rel="prev" title="Blog" href="blog.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-with-pypi">Installation with PyPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-via-source">Installation via Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-tests">Running the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-tests-offscreen">Running the Tests Offscreen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#populating-our-documentation">Populating our Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-documentation">Building the documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Helios supports Python 3.7+.</p>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The mandatory dependencies are:</p>
+<ul class="simple">
+<li><p>numpy &gt;= 1.7.1</p></li>
+<li><p>vtk &gt;= 8.1.0</p></li>
+<li><p>fury</p></li>
+</ul>
+<p>The optional dependencies are:</p>
+<ul class="simple">
+<li><p>opencv</p></li>
+<li><p>cugraph</p></li>
+</ul>
+</div>
+<div class="section" id="installation-with-pypi">
+<h2>Installation with PyPi<a class="headerlink" href="#installation-with-pypi" title="Permalink to this headline">¶</a></h2>
+<p>In a terminal, issue the following command</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install helios
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-via-source">
+<h2>Installation via Source<a class="headerlink" href="#installation-via-source" title="Permalink to this headline">¶</a></h2>
+<p><strong>Step 1.</strong> Get the latest source by cloning this repo</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/fury-gl/helios.git
+</pre></div>
+</div>
+<p><strong>Step 2.</strong> Install requirements</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+<p><strong>Step 3.</strong> Install helios via</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -e .
+</pre></div>
+</div>
+<p><strong>Step 4:</strong> Enjoy!</p>
+</div>
+<div class="section" id="running-the-tests">
+<h2>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h2>
+<p>Let’s install all required packages for the running the test</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+pip install -r requirements_dev.txt
+</pre></div>
+</div>
+<p>There are two ways to run Helios tests:</p>
+<ul class="simple">
+<li><p>From the command line. You need to be on the Helios package folder</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest -svv helios
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To run a specific test file</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest -svv helios/tests/test_actor.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To run a specific test directory</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest -svv helios/tests
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To run a specific test function</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest -svv -k <span class="s2">&quot;test_my_function_name&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-tests-offscreen">
+<h2>Running the Tests Offscreen<a class="headerlink" href="#running-the-tests-offscreen" title="Permalink to this headline">¶</a></h2>
+<p>Helios is based on VTK which uses OpenGL for all its rendering. For a headless rendering, we recommend to install and use Xvfb software on linux or OSX.
+Since Xvfb will require an X server (we also recommend to install XQuartz package on OSX). After Xvfb is installed you have 2 options to run Helios tests:</p>
+<ul class="simple">
+<li><p>First option</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:0
+Xvfb :0 -screen 1920x1080x24 &gt; /dev/null <span class="m">2</span>&gt;1 <span class="p">&amp;</span>
+pytest -svv fury
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Second option</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:0
+xvfb-run --server-args<span class="o">=</span><span class="s2">&quot;-screen 0 1920x1080x24&quot;</span> pytest -svv fury
+</pre></div>
+</div>
+</div>
+<div class="section" id="populating-our-documentation">
+<h2>Populating our Documentation<a class="headerlink" href="#populating-our-documentation" title="Permalink to this headline">¶</a></h2>
+<p>In our <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder structure above:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> is the folder that contains all <code class="docutils literal notranslate"><span class="pre">*.rst</span></code> files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tutorials</span></code> is the directory where we have all python scripts that describe how to use the api.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples</span></code> being the Helios app showcases.</p></li>
+</ul>
+<div class="section" id="building-the-documentation">
+<h3>Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">¶</a></h3>
+<p><strong>Step 1.</strong> Install all required packages for the documentation generation</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -U -r requirements.txt
+pip install -U -r requirements_docs_sys.txt
+</pre></div>
+</div>
+<p><strong>Step 2.</strong> Go to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder and run the following command to generate it (Linux and macOS)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -C . clean <span class="o">&amp;&amp;</span> make -C . html
+</pre></div>
+</div>
+<p>To generate the documentation without running the examples</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -C . clean <span class="o">&amp;&amp;</span> make -C . html-no-examples
+</pre></div>
+</div>
+<p>or under Windows</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make clean
+make html
+</pre></div>
+</div>
+<p>To generate the documentation without running the examples under Windows</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make clean
+make html-no-examples
+</pre></div>
+</div>
+<p><strong>Step 3.</strong> Congratulations! the <code class="docutils literal notranslate"><span class="pre">build</span></code> folder has been generated! Go to <code class="docutils literal notranslate"><span class="pre">build/html</span></code> and open with browser <code class="docutils literal notranslate"><span class="pre">index.html</span></code> to see your generated documentation.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getting_started_visual_aspects.html" class="btn btn-neutral float-right" title="Visual Aspects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="blog.html" class="btn btn-neutral float-left" title="Blog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

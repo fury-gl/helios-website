@@ -1,0 +1,32 @@
+helios.layouts.forceatlas2gpu.ForceAtlas2
+=========================================
+
+.. currentmodule:: helios.layouts.forceatlas2gpu
+
+.. autoclass:: ForceAtlas2
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ForceAtlas2.cleanup
+      ~ForceAtlas2.start
+      ~ForceAtlas2.stop
+      ~ForceAtlas2.update
+   
+   
+
+   
+   
+   
+    
+      .. _sphx_glr_backref_helios.layouts.ForceAtlas2:
+      .. minigallery:: helios.layouts.ForceAtlas2
+         :add-heading:
+   

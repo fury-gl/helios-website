@@ -1,0 +1,32 @@
+helios.layouts.base.NetworkLayoutIPCRender
+==========================================
+
+.. currentmodule:: helios.layouts.base
+
+.. autoclass:: NetworkLayoutIPCRender
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NetworkLayoutIPCRender.cleanup
+      ~NetworkLayoutIPCRender.start
+      ~NetworkLayoutIPCRender.stop
+      ~NetworkLayoutIPCRender.update
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.base.NetworkLayoutIPCRender.NetworkLayoutIPCRender:
+      .. minigallery:: helios.layouts.base.NetworkLayoutIPCRender.NetworkLayoutIPCRender
+         :add-heading:
+   

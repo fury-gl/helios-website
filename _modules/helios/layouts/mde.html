@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.layouts.mde &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.layouts.mde</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.layouts.mde</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;IPC-PyMDE: Minimum-Distortion Embedding Network Layout</span>
+
+<span class="sd">This module implements a IPC Network Layout to be used with PyMDE[1].</span>
+<span class="sd">The IPC layout grants a non-blocking behavior for PyMDE.</span>
+<span class="sd">PyMDE solves minimum-distortion embedding problem using pytorch.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">    [1] A. Agrawal, A. Ali, and S. Boyd, “Minimum-Distortion Embedding,”</span>
+<span class="sd">    arXiv:2103.02559 [cs, math, stat], Mar. 2021, Accessed: Jul. 24, 2021.</span>
+<span class="sd">    `http://arxiv.org/abs/2103.02559 &lt;http://arxiv.org/abs/2103.02559&gt;`_</span>
+
+<span class="sd">Notes</span>
+<span class="sd">-----</span>
+<span class="sd">    Python 3.8 or greater is a requirement for this module.</span>
+
+
+<span class="sd">Attributes</span>
+<span class="sd">----------</span>
+<span class="sd">_CONSTRAINTS : dict</span>
+<span class="sd">_PENALTIES : dict</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">pymde</span>
+
+<span class="kn">from</span> <span class="nn">helios.layouts.base</span> <span class="kn">import</span> <span class="n">NetworkLayoutIPCRender</span>
+<span class="kn">from</span> <span class="nn">helios.layouts.base</span> <span class="kn">import</span> <span class="n">NetworkLayoutIPCServerCalc</span>
+
+
+<span class="n">_CONSTRAINTS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;centered&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">Centered</span><span class="p">,</span>
+    <span class="s1">&#39;standardized&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">Standardized</span><span class="p">,</span>
+    <span class="s1">&#39;anchored&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">Anchored</span>
+<span class="p">}</span>
+
+<span class="n">_PENALTIES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;cubic&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Cubic</span><span class="p">,</span>
+    <span class="s1">&#39;huber&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Huber</span><span class="p">,</span>
+    <span class="s1">&#39;invpower&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">InvPower</span><span class="p">,</span>
+    <span class="s1">&#39;linear&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span>
+    <span class="s1">&#39;log&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Log</span><span class="p">,</span>
+    <span class="s1">&#39;log1p&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Log1p</span><span class="p">,</span>
+    <span class="s1">&#39;logratio&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">LogRatio</span><span class="p">,</span>
+    <span class="s1">&#39;logistic&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Logistic</span><span class="p">,</span>
+    <span class="s1">&#39;power&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Power</span><span class="p">,</span>
+    <span class="s1">&#39;pushandpull&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">PushAndPull</span><span class="p">,</span>
+    <span class="s1">&#39;quadratic&#39;</span><span class="p">:</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="MDEServerCalc"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.mde.html#helios.layouts.mde.MDEServerCalc">[docs]</a><span class="k">class</span> <span class="nc">MDEServerCalc</span><span class="p">(</span><span class="n">NetworkLayoutIPCServerCalc</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">num_nodes</span><span class="p">,</span>
+        <span class="n">num_edges</span><span class="p">,</span>
+        <span class="n">edges_buffer_name</span><span class="p">,</span>
+        <span class="n">positions_buffer_name</span><span class="p">,</span>
+        <span class="n">info_buffer_name</span><span class="p">,</span>
+        <span class="n">dimension</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">weights_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">snapshots_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">num_snapshots</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">penalty_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">penalty_parameters_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">num_penalty_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">attractive_penalty_name</span><span class="o">=</span><span class="s1">&#39;log1p&#39;</span><span class="p">,</span>
+        <span class="n">repulsive_penalty_name</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span>
+        <span class="n">use_shortest_path</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">constraint_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">constraint_anchors_buffer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">num_anchors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This Obj. reads the network information stored in a shared memory</span>
+<span class="sd">        resource and execute the MDE layout algorithm</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        num_nodes : int</span>
+<span class="sd">        num_edges : int</span>
+<span class="sd">        edges_buffer_name : str</span>
+<span class="sd">        positions_buffer_name : str</span>
+<span class="sd">        info_buffer_name : str</span>
+<span class="sd">        weights_buffer_name : str, optional</span>
+<span class="sd">        snapshots_buffer_name : str, optional</span>
+<span class="sd">        num_snapshots : int, optional</span>
+<span class="sd">        dimension=3 : int, optional</span>
+<span class="sd">            layout dimension</span>
+<span class="sd">        penalty_name : str, optional</span>
+<span class="sd">        penalty_parameters_buffer_name : str, optional</span>
+<span class="sd">        num_penalty_parameters : int, optional</span>
+<span class="sd">        attractive_penalty_name : str, optional</span>
+<span class="sd">        repulsive_penalty_name : str, optional</span>
+<span class="sd">        use_shortest_path : str, optional</span>
+<span class="sd">        constraint_name : str, optional</span>
+<span class="sd">        constraint_anchors_buffer_name : str, optional</span>
+<span class="sd">        num_anchors : int, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">num_nodes</span><span class="p">,</span>
+            <span class="n">num_edges</span><span class="p">,</span>
+            <span class="n">edges_buffer_name</span><span class="p">,</span>
+            <span class="n">positions_buffer_name</span><span class="p">,</span>
+            <span class="n">info_buffer_name</span><span class="p">,</span>
+            <span class="n">weights_buffer_name</span><span class="p">,</span>
+            <span class="n">dimension</span><span class="p">,</span>
+            <span class="n">snapshots_buffer_name</span><span class="p">,</span>
+            <span class="n">num_snapshots</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_positions_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">edges_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">weights_buffer_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">weights_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">weights_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">edges_torch</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">use_shortest_path</span> <span class="ow">and</span> <span class="n">penalty_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">g_torch</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">Graph</span><span class="o">.</span><span class="n">from_edges</span><span class="p">(</span><span class="n">edges_torch</span><span class="p">,</span> <span class="n">weights_torch</span><span class="p">)</span>
+            <span class="n">shortest_paths_graph</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">preprocess</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">shortest_paths</span><span class="p">(</span>
+                <span class="n">g_torch</span><span class="p">)</span>
+            <span class="n">edges_torch</span> <span class="o">=</span> <span class="n">shortest_paths_graph</span><span class="o">.</span><span class="n">edges</span>
+            <span class="n">distortion</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">WeightedQuadratic</span><span class="p">(</span>
+                <span class="n">shortest_paths_graph</span><span class="o">.</span><span class="n">distances</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">penalty_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">distortion</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">penalties</span><span class="o">.</span><span class="n">WeightedQuadratic</span><span class="p">(</span><span class="n">weights_torch</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">penalty_name</span> <span class="ow">in</span> <span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">func</span> <span class="o">=</span> <span class="n">_PENALTIES</span><span class="p">[</span><span class="n">penalty_name</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">penalty_name</span> <span class="o">==</span> <span class="s1">&#39;pushandpull&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">attractive_penalty_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span>\
+                         <span class="n">repulsive_penalty_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="s1">&#39;The attractive/repulsive penalty&#39;</span> <span class="o">+</span>
+                            <span class="sa">f</span><span class="s1">&#39; valid names are: </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                    <span class="n">distortion</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                        <span class="n">weights_torch</span><span class="p">,</span>
+                        <span class="n">_PENALTIES</span><span class="p">[</span><span class="n">attractive_penalty_name</span><span class="p">],</span>
+                        <span class="n">_PENALTIES</span><span class="p">[</span><span class="n">repulsive_penalty_name</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">penalty_parameters_buffer_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+                        <span class="s1">&#39;penalty_parameters&#39;</span><span class="p">,</span>
+                        <span class="n">penalty_parameters_buffer_name</span><span class="p">,</span>
+                        <span class="mi">1</span><span class="p">,</span>
+                        <span class="s1">&#39;float32&#39;</span><span class="p">,</span>
+                        <span class="n">num_penalty_parameters</span>
+                    <span class="p">)</span>
+                    <span class="n">distortion</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                        <span class="n">weights_torch</span><span class="p">,</span>
+                        <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">penalty_parameters</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">distortion</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">weights_torch</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;The penalties available are: &#39;</span> <span class="o">+</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">constraint_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constraint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">constraint_name</span> <span class="ow">in</span> <span class="n">_CONSTRAINTS</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">constraint_name</span> <span class="o">==</span> <span class="s1">&#39;anchored&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">constraint_anchors_buffer_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="s1">&#39;Missing constraint anchors &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;buffer name&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span>
+                        <span class="s1">&#39;anchors&#39;</span><span class="p">,</span>
+                        <span class="n">constraint_anchors_buffer_name</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                        <span class="s1">&#39;float32&#39;</span><span class="p">,</span>
+                        <span class="n">num_anchors</span>
+                    <span class="p">)</span>
+                    <span class="n">torch_anchors</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">anchors</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span>
+                            <span class="mi">0</span><span class="p">:</span><span class="n">num_anchors</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    <span class="n">torch_anchors_pos</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">anchors</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span>
+                            <span class="mi">0</span><span class="p">:</span><span class="n">num_anchors</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">]</span>
+                    <span class="p">)</span>
+
+                    <span class="nb">print</span><span class="p">(</span><span class="n">torch_anchors_pos</span><span class="p">)</span>
+                    <span class="n">constraint</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">Anchored</span><span class="p">(</span>
+                        <span class="n">anchors</span><span class="o">=</span><span class="n">torch_anchors</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">torch_anchors_pos</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">constraint</span> <span class="o">=</span> <span class="n">_CONSTRAINTS</span><span class="p">[</span><span class="n">constraint_name</span><span class="p">]()</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;The constraint valid names are: &#39;</span> <span class="o">+</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">_CONSTRAINTS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mde</span> <span class="o">=</span> <span class="n">pymde</span><span class="o">.</span><span class="n">MDE</span><span class="p">(</span>
+           <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">_repr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+           <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="p">,</span>
+           <span class="n">edges_torch</span><span class="p">,</span>
+           <span class="n">distortion_function</span><span class="o">=</span><span class="n">distortion</span><span class="p">,</span>
+           <span class="n">constraint</span><span class="o">=</span><span class="n">constraint</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="MDEServerCalc.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.mde.html#helios.layouts.mde.MDEServerCalc.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method starts the network layout algorithm.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        steps : int</span>
+<span class="sd">            number of iterations</span>
+<span class="sd">        iters_by_step: int</span>
+<span class="sd">            number of iterations per step</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># -1 means the computation has been intialized</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_positions_torch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mde</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_positions_torch</span><span class="p">,</span>
+                    <span class="n">max_iter</span><span class="o">=</span><span class="n">iters_by_step</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_positions_torch</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">step</span><span class="p">)</span>
+        <span class="c1"># to inform that everthing worked</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span></div></div>
+
+
+<div class="viewcode-block" id="MDE"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.mde.html#helios.layouts.mde.MDE">[docs]</a><span class="k">class</span> <span class="nc">MDE</span><span class="p">(</span><span class="n">NetworkLayoutIPCRender</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Minimum Distortion Embedding algorithm running on IPC </span>
+
+<span class="sd">    This call  the PyMDE lib running in a different process which comunicates</span>
+<span class="sd">    with this object through SharedMemory from python&gt;=3.8.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    [1] A. Agrawal, A. Ali, and S. Boyd, “Minimum-Distortion Embedding,”</span>
+<span class="sd">    arXiv:2103.02559 [cs, math, stat], Mar. 2021, Accessed: Jul. 24, 2021.</span>
+<span class="sd">    `http://arxiv.org/abs/2103.02559 &lt;http://arxiv.org/abs/2103.02559&gt;`_</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Python 3.8+ is required to use this</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">edges</span><span class="p">,</span>
+        <span class="n">network_draw</span><span class="p">,</span>
+        <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">use_shortest_path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">constraint_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">anchors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">anchors_pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">penalty_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">penalty_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">attractive_penalty_name</span><span class="o">=</span><span class="s1">&#39;log1p&#39;</span><span class="p">,</span>
+        <span class="n">repulsive_penalty_name</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        edges : ndarray</span>
+<span class="sd">            the edges of the graph. A numpy array of shape (n_edges, 2)</span>
+<span class="sd">        network_draw : NetworkDraw</span>
+<span class="sd">            a NetworkDraw object</span>
+<span class="sd">        weights: array, optional</span>
+<span class="sd">            edge weights. A one dimensional array of shape (n_edges, )</span>
+<span class="sd">        use_shortest_path : bool, optional</span>
+<span class="sd">            If set to True, shortest path is used to compute the layout</span>
+<span class="sd">        constraint_name : str, optional</span>
+<span class="sd">            centered, standardized or anchored</span>
+<span class="sd">        anchors : array, optional</span>
+<span class="sd">            a list of vertex that will be anchored</span>
+<span class="sd">        anchors_pos : ndarray, optional</span>
+<span class="sd">            The positions of the anchored vertex</span>
+<span class="sd">        penalty_name : str, optional</span>
+<span class="sd">            cubic, huber, invpower, linear, log, log1p, logratio,</span>
+<span class="sd">            logistic, power, pushandpull  or quadratic</span>
+<span class="sd">        penalty_parameters : array, optional</span>
+<span class="sd">            the parameters of the penalty function</span>
+<span class="sd">        attractive_penalty_name : str, optional</span>
+<span class="sd">            cubic, huber, invpower, linear, log, log1p, logratio,</span>
+<span class="sd">            logistic, power, pushandpull  or quadratic</span>
+<span class="sd">        repulsive_penalty_name : str, optional</span>
+<span class="sd">            cubic, huber, invpower, linear, log, log1p, logratio,</span>
+<span class="sd">            logistic, power, pushandpull  or quadratic</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">network_draw</span><span class="p">,</span>
+            <span class="n">edges</span><span class="p">,</span>
+            <span class="n">weights</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">constraint_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_CONSTRAINTS</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span>\
+                <span class="n">constraint_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;The constraint valid names are: &#39;</span> <span class="o">+</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">_CONSTRAINTS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">constraint_name</span> <span class="o">==</span> <span class="s1">&#39;anchored&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">anchors</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">anchors_pos</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;&quot;anchors&quot; and &quot;anchors_pos&quot; are mandatory &#39;</span> <span class="o">+</span>
+                    <span class="s1">&#39;when using anchored constraint&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+                <span class="s1">&#39;anchors&#39;</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">anchors_pos</span><span class="p">,</span> <span class="n">anchors</span><span class="p">],</span>
+                <span class="n">dimension</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_constraint_name</span> <span class="o">=</span> <span class="n">constraint_name</span>
+        <span class="k">for</span> <span class="n">penalty</span> <span class="ow">in</span> <span class="p">[</span>
+                <span class="n">penalty_name</span><span class="p">,</span> <span class="n">attractive_penalty_name</span><span class="p">,</span>
+                <span class="n">repulsive_penalty_name</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">penalty</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="n">penalty</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;The penalties available are: &#39;</span> <span class="o">+</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">_PENALTIES</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_name</span> <span class="o">=</span> <span class="n">penalty_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attractive_penalty_name</span> <span class="o">=</span> <span class="n">attractive_penalty_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_repulsive_penalty_name</span> <span class="o">=</span> <span class="n">repulsive_penalty_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_use_shortest_path</span> <span class="o">=</span> <span class="n">use_shortest_path</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">penalty_parameters</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_parameters</span> <span class="o">=</span> <span class="n">penalty_parameters</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">add_array</span><span class="p">(</span>
+                <span class="s1">&#39;penalty_parameters&#39;</span><span class="p">,</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">penalty_parameters</span><span class="p">),</span>
+                <span class="n">dimension</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_parameters</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_command_string</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">3</span><span class="p">,):</span>
+        <span class="sd">&quot;&quot;&quot;This will return the python code which starts the MDEServer</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        steps : int, optional, default 100</span>
+<span class="sd">            number of iterations</span>
+<span class="sd">        iters_by_step : int, optional, default 3</span>
+<span class="sd">            number of iterations per step</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        s : str</span>
+<span class="sd">            the python code to start the MDEServer</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;from helios.layouts.mde import MDEServerCalc;&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;from fury.stream.tools import remove_shm_from_resource_tracker;&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;remove_shm_from_resource_tracker();&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;mde_h = MDEServerCalc(&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;num_nodes=&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_nodes</span><span class="si">}</span><span class="s1">,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;num_edges=&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_edges</span><span class="si">}</span><span class="s1">,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;edges_buffer_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;positions_buffer_name=&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;info_buffer_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;weights&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;weights_buffer_name=&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_record_positions</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;snapshots_buffer_name=&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">snapshots_positions</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;num_snapshots=</span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s1">,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;use_shortest_path=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_use_shortest_path</span><span class="si">}</span><span class="s1">,&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_constraint_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;constraint_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_constraint_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_constraint_name</span> <span class="o">==</span> <span class="s1">&#39;anchored&#39;</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;constraint_anchors_buffer_name=&#39;</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">anchors</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;num_anchors=&#39;</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">anchors</span><span class="o">.</span><span class="n">_num_elements</span><span class="si">}</span><span class="s1">,&#39;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;penalty_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_penalty_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_name</span> <span class="o">==</span> <span class="s1">&#39;pushandpull&#39;</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;attractive_penalty_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_attractive_penalty_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;repulsive_penalty_name=&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_repulsive_penalty_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_penalty_parameters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;penalty_parameters_buffer_name=&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">penalty_parameters</span><span class="o">.</span><span class="n">_buffer_name</span><span class="si">}</span><span class="s1">&quot;,&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;num_penalty_parameters=&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">penalty_parameters</span><span class="o">.</span><span class="n">_num_elements</span><span class="si">}</span><span class="s1">,&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;dimension=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span><span class="si">}</span><span class="s1">);&#39;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;mde_h.start(</span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="n">iters_by_step</span><span class="si">}</span><span class="s1">);&#39;</span>
+        <span class="k">return</span> <span class="n">s</span></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

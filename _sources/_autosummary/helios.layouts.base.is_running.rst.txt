@@ -1,0 +1,6 @@
+helios.layouts.base.is\_running
+===============================
+
+.. currentmodule:: helios.layouts.base
+
+.. autofunction:: is_running

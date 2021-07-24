@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.backends.fury.actors &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="helios.backends.fury.draw" href="helios.backends.fury.draw.html" />
+    <link rel="prev" title="helios.backends.fury" href="helios.backends.fury.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="helios.layouts.html">helios.layouts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="helios.backends.fury.html">helios.backends.fury</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.backends.fury.actors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helios.backends.fury.draw.html">helios.backends.fury.draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helios.backends.fury.tools.html">helios.backends.fury.tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="helios.core.html">helios.core</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../api.html">API</a> &raquo;</li>
+        
+          <li><a href="helios.backends.fury.html">helios.backends.fury</a> &raquo;</li>
+        
+      <li>helios.backends.fury.actors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <div class="section" id="module-helios.backends.fury.actors">
+<span id="helios-backends-fury-actors"></span><h1>helios.backends.fury.actors<a class="headerlink" href="#module-helios.backends.fury.actors" title="Permalink to this headline">¶</a></h1>
+<p>VTK Super Actors</p>
+<p>This modules contains the VTK super actors to be used in the
+network visualization.</p>
+<p class="rubric">Classes</p>
+<dl class="py class">
+<dt id="helios.backends.fury.actors.FurySuperEdge">
+<em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">FurySuperEdge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">edges</span></em>, <em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">colors</span></em>, <em class="sig-param"><span class="n">opacity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">line_width</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">blending</span><span class="o">=</span><span class="default_value">'additive'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#FurySuperEdge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.FurySuperEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<span class="target" id="sphx-glr-backref-helios-backends-fury-actors-furysuperedge"></span></dd></dl>
+
+<dl class="py class">
+<dt id="helios.backends.fury.actors.FurySuperNode">
+<em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">FurySuperNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">0, 1, 0</span></em>, <em class="sig-param"><span class="n">scales</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">marker</span><span class="o">=</span><span class="default_value">'3d'</span></em>, <em class="sig-param"><span class="n">edge_width</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">edge_opacity</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">edge_color</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">marker_opacity</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">write_frag_depth</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#FurySuperNode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.FurySuperNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<span class="target" id="sphx-glr-backref-helios-backends-fury-actors-furysupernode"></span></dd></dl>
+
+<dl class="py class">
+<dt id="helios.backends.fury.actors.NetworkSuperActor">
+<em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">NetworkSuperActor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">edges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">0, 1, 0</span></em>, <em class="sig-param"><span class="n">scales</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">marker</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">node_edge_width</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">node_opacity</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">node_edge_opacity</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">node_edge_color</span><span class="o">=</span><span class="default_value">255, 255, 255</span></em>, <em class="sig-param"><span class="n">edge_line_color</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">edge_line_opacity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">edge_line_width</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">write_frag_depth</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#NetworkSuperActor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.NetworkSuperActor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id1">
+<img alt="Force-Directed: SBM Model and 2d Layout" src="../_images/sphx_glr_viz_helios2d_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id2">
+<img alt="Force-Directed: SBM Model and 3d Layout" src="../_images/sphx_glr_viz_helios3d_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Minmum Distortion Embedding: Anchored Constraints"><div class="figure align-default" id="id3">
+<img alt="Minmum Distortion Embedding: Anchored Constraints" src="../_images/sphx_glr_viz_mde_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_mde.html#sphx-glr-examples-gallery-viz-mde-py"><span class="std std-ref">Minmum Distortion Embedding: Anchored Constraints</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id4">
+<img alt="ForceAtlas2: SBM Model" src="../_images/sphx_glr_viz_forceatlas2gpu_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-clear"></div></dd></dl>
+
+</div>
+
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="helios.backends.fury.draw.html" class="btn btn-neutral float-right" title="helios.backends.fury.draw" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="helios.backends.fury.html" class="btn btn-neutral float-left" title="helios.backends.fury" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

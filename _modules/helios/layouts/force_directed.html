@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>helios.layouts.force_directed &mdash; Helios beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo_36.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />    
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Helios
+          
+
+          
+            
+            <img src="../../../_static/logo_100.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blog.html">Blog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Working with Helios</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_visual_aspects.html">Visual Aspects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_layouts.html">Network Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started_streaming.html">Streaming and Colaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_gallery/index.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symlink/contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Join our community!</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios/graphs/contributors">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community.html">Communities</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/6btFPPj">Discord Community</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/fury-gl/helios">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Helios</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>helios.layouts.force_directed</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             <h1>Source code for helios.layouts.force_directed</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Helios Force-Directed Layout using octree</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">    [1] Fruchterman, T. M. J., &amp; Reingold, E. M. (1991). Graph Drawing</span>
+<span class="sd">    by Force-Directed Placement. Software: Practice and Experience, 21(11).</span>
+<span class="sd">    [2] Y. Hu, “Efficient, High-Quality Force-Directed Graph Drawing,” The</span>
+<span class="sd">    Mathematica Journal, p. 35, 2006.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">heliosFR</span>
+
+<span class="kn">from</span> <span class="nn">fury.stream.tools</span> <span class="kn">import</span> <span class="n">IntervalTimer</span>
+<span class="kn">from</span> <span class="nn">helios.layouts.base</span> <span class="kn">import</span> <span class="n">NetworkLayoutAsync</span>
+
+
+<div class="viewcode-block" id="HeliosFr"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr">[docs]</a><span class="k">class</span> <span class="nc">HeliosFr</span><span class="p">(</span><span class="n">NetworkLayoutAsync</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A 2D/3D Force-directed layout method</span>
+
+<span class="sd">    This method is a wrapper for the helios force-directed algorithm, heliosFR.</span>
+<span class="sd">    HeliosFr is a force-directed layout algorithm that is based on oct-trees.</span>
+<span class="sd">    The algorithm is designed to work with a large number of nodes and edges.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    [1] Fruchterman, T. M. J., &amp; Reingold, E. M. (1991). Graph Drawing</span>
+<span class="sd">    by Force-Directed Placement. Software: Practice and Experience, 21(11).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">edges</span><span class="p">,</span>
+        <span class="n">network_draw</span><span class="p">,</span>
+        <span class="n">viscosity</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.0006</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">max_workers</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">update_interval_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">velocities</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        edges : ndarray</span>
+<span class="sd">        network_draw : NetworkDraw</span>
+<span class="sd">        viscosity : float, optional</span>
+<span class="sd">        a : float, optional</span>
+<span class="sd">        b : float, optional</span>
+<span class="sd">        max_workers : int, optional</span>
+<span class="sd">            number of threads</span>
+<span class="sd">        update_interval_workers : float, optional</span>
+<span class="sd">            When you set this to a value greater than zero the</span>
+<span class="sd">            helios-fr will wait to perform each step. This can be used</span>
+<span class="sd">            to reduce the CPU consumption</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        network_draw : NetworkDraw</span>
+<span class="sd">            The NetworkDraw Instance</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_network_draw</span> <span class="o">=</span> <span class="n">network_draw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nodes_count</span> <span class="o">=</span> <span class="n">network_draw</span><span class="o">.</span><span class="n">positions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_interval_workers</span> <span class="o">=</span> <span class="n">update_interval_workers</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span>
+            <span class="n">network_draw</span><span class="o">.</span><span class="n">positions</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint64</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">velocities</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">velocities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodes_count</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span> <span class="o">=</span> <span class="n">heliosFR</span><span class="o">.</span><span class="n">FRLayout</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_positions</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">viscosity</span><span class="p">,</span>
+            <span class="n">maxWorkers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span>
+            <span class="n">updateInterval</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_update_interval_workers</span><span class="p">)</span>
+
+<div class="viewcode-block" id="HeliosFr.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Starts the helios force-directed layout using others threads (async).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ms : float, optional</span>
+<span class="sd">            Interval in milleseconds to update the node</span>
+<span class="sd">            and edge positions in the network visualization.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="n">ms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ms</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_interval_workers</span><span class="p">:</span>
+                <span class="n">ms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_interval_workers</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="n">IntervalTimer</span><span class="p">(</span>
+                     <span class="n">ms</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="HeliosFr.stop"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This will stop the threads running the</span>
+<span class="sd">        helios force-directed algorithm</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="HeliosFr.steps"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.steps">[docs]</a>    <span class="k">def</span> <span class="nf">steps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterations</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A Sync version of the helios force-directed algorithm.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        iterations : int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">iterate</span><span class="p">(</span><span class="n">iterations</span><span class="o">=</span><span class="n">iterations</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div></div>
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021-2021, Helios.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

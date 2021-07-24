@@ -1,0 +1,29 @@
+helios.layouts.base.NetworkLayoutIPCServerCalc
+==============================================
+
+.. currentmodule:: helios.layouts.base
+
+.. autoclass:: NetworkLayoutIPCServerCalc
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NetworkLayoutIPCServerCalc.start
+   
+   
+
+   
+   
+   
+   
+      .. _sphx_glr_backref_helios.layouts.base.NetworkLayoutIPCServerCalc.NetworkLayoutIPCServerCalc:
+      .. minigallery:: helios.layouts.base.NetworkLayoutIPCServerCalc.NetworkLayoutIPCServerCalc
+         :add-heading:
+   
