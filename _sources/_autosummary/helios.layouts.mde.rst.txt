@@ -3,18 +3,33 @@ helios.layouts.mde
 
 
 .. automodule:: helios.layouts.mde
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `MDE,  <#helios.layouts.mde.MDE>`_
+      `MDEServerCalc,  <#helios.layouts.mde.MDEServerCalc>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+   MDE
+   ---
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: MDE
       :members:
       :show-inheritance:
@@ -31,6 +46,24 @@ helios.layouts.mde
       .. minigallery:: helios.layouts.MDE
          :add-heading:
       
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   MDEServerCalc
+   -------------
+
    .. autoclass:: MDEServerCalc
       :members:
       :show-inheritance:

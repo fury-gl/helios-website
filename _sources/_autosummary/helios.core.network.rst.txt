@@ -3,18 +3,36 @@ helios.core.network
 
 
 .. automodule:: helios.core.network
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `Network,  <#helios.core.network.Network>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+   Network
+   -------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: Network
       :members:
       :show-inheritance:

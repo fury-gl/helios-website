@@ -144,7 +144,16 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="helios.layouts.html">helios.layouts</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.base</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-objects">List of Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-functions">List of Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">is_running</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphx-glr-backref-helios-layouts-base-is-running">NetworkLayout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">NetworkLayoutAsync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">NetworkLayoutIPCRender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">NetworkLayoutIPCServerCalc</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.force_directed.html">helios.layouts.force_directed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.forceatlas2gpu.html">helios.layouts.forceatlas2gpu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.ipc_tools.html">helios.layouts.ipc_tools</a></li>
@@ -237,7 +246,20 @@
 <p>This module provides a set of abstract classes to deal with
 different network layouts algorithms using different communication
 strategies.</p>
-<p class="rubric">Functions</p>
+<div class="section" id="list-of-objects">
+<h2>List of Objects<a class="headerlink" href="#list-of-objects" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="#helios.layouts.base.NetworkLayout">NetworkLayout,</a>
+<a class="reference external" href="#helios.layouts.base.NetworkLayoutAsync">NetworkLayoutAsync,</a>
+<a class="reference external" href="#helios.layouts.base.NetworkLayoutIPCRender">NetworkLayoutIPCRender,</a>
+<a class="reference external" href="#helios.layouts.base.NetworkLayoutIPCServerCalc">NetworkLayoutIPCServerCalc,</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="list-of-functions">
+<h2>List of Functions<a class="headerlink" href="#list-of-functions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="#helios.layouts.base.is_running">is_running,</a></p>
+</div></blockquote>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -246,6 +268,9 @@ strategies.</p>
 <tbody>
 </tbody>
 </table>
+</div>
+<div class="section" id="id1">
+<h2>is_running<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="helios.layouts.base.is_running">
 <code class="sig-prename descclassname">helios.layouts.base.</code><code class="sig-name descname">is_running</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/base.html#is_running"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.base.is_running" title="Permalink to this definition">¶</a></dt>
@@ -266,35 +291,43 @@ strategies.</p>
 </dl>
 </dd></dl>
 
-<p class="rubric" id="sphx-glr-backref-helios-layouts-base-is-running">Classes</p>
+</div>
+<div class="section" id="sphx-glr-backref-helios-layouts-base-is-running">
+<span id="id2"></span><h2>NetworkLayout<a class="headerlink" href="#sphx-glr-backref-helios-layouts-base-is-running" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.base.NetworkLayout">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.base.</code><code class="sig-name descname">NetworkLayout</code><a class="reference internal" href="../_modules/helios/layouts/base.html#NetworkLayout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.base.NetworkLayout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
-<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id6">
 <img alt="Force-Directed: SBM Model and 2d Layout" src="../_images/sphx_glr_viz_helios2d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id2">
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id7">
 <img alt="Force-Directed: SBM Model and 3d Layout" src="../_images/sphx_glr_viz_helios3d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="sphx-glr-clear"></div></dd></dl>
 
+</div>
+<div class="section" id="id3">
+<h2>NetworkLayoutAsync<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.base.NetworkLayoutAsync">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.base.</code><code class="sig-name descname">NetworkLayoutAsync</code><a class="reference internal" href="../_modules/helios/layouts/base.html#NetworkLayoutAsync"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.base.NetworkLayoutAsync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#helios.layouts.base.NetworkLayout" title="helios.layouts.base.NetworkLayout"><code class="xref py py-class docutils literal notranslate"><span class="pre">helios.layouts.base.NetworkLayout</span></code></a></p>
-<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id3">
+<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id8">
 <img alt="Force-Directed: SBM Model and 2d Layout" src="../_images/sphx_glr_viz_helios2d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id4">
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id9">
 <img alt="Force-Directed: SBM Model and 3d Layout" src="../_images/sphx_glr_viz_helios3d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="sphx-glr-clear"></div></dd></dl>
 
+</div>
+<div class="section" id="id4">
+<h2>NetworkLayoutIPCRender<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.base.NetworkLayoutIPCRender">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.base.</code><code class="sig-name descname">NetworkLayoutIPCRender</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network_draw</span></em>, <em class="sig-param"><span class="n">edges</span></em>, <em class="sig-param"><span class="n">weights</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/base.html#NetworkLayoutIPCRender"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.base.NetworkLayoutIPCRender" title="Permalink to this definition">¶</a></dt>
@@ -310,13 +343,13 @@ and creates the shared memory resources.</p>
 </ul>
 </dd>
 </dl>
-<div class="sphx-glr-thumbcontainer" tooltip="Minmum Distortion Embedding: Anchored Constraints"><div class="figure align-default" id="id5">
+<div class="sphx-glr-thumbcontainer" tooltip="Minmum Distortion Embedding: Anchored Constraints"><div class="figure align-default" id="id10">
 <img alt="Minmum Distortion Embedding: Anchored Constraints" src="../_images/sphx_glr_viz_mde_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_mde.html#sphx-glr-examples-gallery-viz-mde-py"><span class="std std-ref">Minmum Distortion Embedding: Anchored Constraints</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_mde.html#sphx-glr-examples-gallery-viz-mde-py"><span class="std std-ref">Minmum Distortion Embedding: Anchored Constraints</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id6">
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id11">
 <img alt="ForceAtlas2: SBM Model" src="../_images/sphx_glr_viz_forceatlas2gpu_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="sphx-glr-clear"></div><dl class="py method">
 <dt id="helios.layouts.base.NetworkLayoutIPCRender.cleanup">
@@ -371,6 +404,9 @@ and right after that refresh the network draw</p>
 
 </dd></dl>
 
+</div>
+<div class="section" id="id5">
+<h2>NetworkLayoutIPCServerCalc<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.base.NetworkLayoutIPCServerCalc">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.base.</code><code class="sig-name descname">NetworkLayoutIPCServerCalc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_nodes</span></em>, <em class="sig-param"><span class="n">num_edges</span></em>, <em class="sig-param"><span class="n">edges_buffer_name</span></em>, <em class="sig-param"><span class="n">positions_buffer_name</span></em>, <em class="sig-param"><span class="n">info_buffer_name</span></em>, <em class="sig-param"><span class="n">weights_buffer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dimension</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">snaphosts_buffer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_snapshots</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/base.html#NetworkLayoutIPCServerCalc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.base.NetworkLayoutIPCServerCalc" title="Permalink to this definition">¶</a></dt>
@@ -410,6 +446,7 @@ inside of a subprocess which will update the network layout positions</p>
 
 </dd></dl>
 
+</div>
 </div>
 
 <div class="section">

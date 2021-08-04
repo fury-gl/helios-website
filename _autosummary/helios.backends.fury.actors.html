@@ -145,7 +145,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="helios.layouts.html">helios.layouts</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="helios.backends.fury.html">helios.backends.fury</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.backends.fury.actors</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.backends.fury.actors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-objects">List of Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">FurySuperEdge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphx-glr-backref-helios-backends-fury-actors-furysuperedge">FurySuperNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphx-glr-backref-helios-backends-fury-actors-furysupernode">NetworkSuperActor</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="helios.backends.fury.draw.html">helios.backends.fury.draw</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.backends.fury.tools.html">helios.backends.fury.tools</a></li>
 </ul>
@@ -234,41 +240,57 @@
 <p>VTK Super Actors</p>
 <p>This modules contains the VTK super actors to be used in the
 network visualization.</p>
-<p class="rubric">Classes</p>
+<div class="section" id="list-of-objects">
+<h2>List of Objects<a class="headerlink" href="#list-of-objects" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="#helios.backends.fury.actors.FurySuperEdge">FurySuperEdge,</a>
+<a class="reference external" href="#helios.backends.fury.actors.FurySuperNode">FurySuperNode,</a>
+<a class="reference external" href="#helios.backends.fury.actors.NetworkSuperActor">NetworkSuperActor,</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h2>FurySuperEdge<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.backends.fury.actors.FurySuperEdge">
 <em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">FurySuperEdge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">edges</span></em>, <em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">colors</span></em>, <em class="sig-param"><span class="n">opacity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">line_width</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">blending</span><span class="o">=</span><span class="default_value">'additive'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#FurySuperEdge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.FurySuperEdge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<span class="target" id="sphx-glr-backref-helios-backends-fury-actors-furysuperedge"></span></dd></dl>
+</dd></dl>
 
+</div>
+<div class="section" id="sphx-glr-backref-helios-backends-fury-actors-furysuperedge">
+<span id="id2"></span><h2>FurySuperNode<a class="headerlink" href="#sphx-glr-backref-helios-backends-fury-actors-furysuperedge" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.backends.fury.actors.FurySuperNode">
 <em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">FurySuperNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">0, 1, 0</span></em>, <em class="sig-param"><span class="n">scales</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">marker</span><span class="o">=</span><span class="default_value">'3d'</span></em>, <em class="sig-param"><span class="n">edge_width</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">edge_opacity</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">edge_color</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">marker_opacity</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">write_frag_depth</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#FurySuperNode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.FurySuperNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<span class="target" id="sphx-glr-backref-helios-backends-fury-actors-furysupernode"></span></dd></dl>
+</dd></dl>
 
+</div>
+<div class="section" id="sphx-glr-backref-helios-backends-fury-actors-furysupernode">
+<span id="id3"></span><h2>NetworkSuperActor<a class="headerlink" href="#sphx-glr-backref-helios-backends-fury-actors-furysupernode" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.backends.fury.actors.NetworkSuperActor">
 <em class="property">class </em><code class="sig-prename descclassname">helios.backends.fury.actors.</code><code class="sig-name descname">NetworkSuperActor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">edges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">0, 1, 0</span></em>, <em class="sig-param"><span class="n">scales</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">marker</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">node_edge_width</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">node_opacity</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">node_edge_opacity</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">node_edge_color</span><span class="o">=</span><span class="default_value">255, 255, 255</span></em>, <em class="sig-param"><span class="n">edge_line_color</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">edge_line_opacity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">edge_line_width</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">write_frag_depth</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/backends/fury/actors.html#NetworkSuperActor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.backends.fury.actors.NetworkSuperActor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id4">
 <img alt="Force-Directed: SBM Model and 2d Layout" src="../_images/sphx_glr_viz_helios2d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios2d.html#sphx-glr-examples-gallery-viz-helios2d-py"><span class="std std-ref">Force-Directed: SBM Model and 2d Layout</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id2">
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the Helios Force-Di..."><div class="figure align-default" id="id5">
 <img alt="Force-Directed: SBM Model and 3d Layout" src="../_images/sphx_glr_viz_helios3d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_helios3d.html#sphx-glr-examples-gallery-viz-helios3d-py"><span class="std std-ref">Force-Directed: SBM Model and 3d Layout</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Minmum Distortion Embedding: Anchored Constraints"><div class="figure align-default" id="id3">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Minmum Distortion Embedding: Anchored Constraints"><div class="figure align-default" id="id6">
 <img alt="Minmum Distortion Embedding: Anchored Constraints" src="../_images/sphx_glr_viz_mde_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_mde.html#sphx-glr-examples-gallery-viz-mde-py"><span class="std std-ref">Minmum Distortion Embedding: Anchored Constraints</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_mde.html#sphx-glr-examples-gallery-viz-mde-py"><span class="std std-ref">Minmum Distortion Embedding: Anchored Constraints</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id4">
+</div><div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id7">
 <img alt="ForceAtlas2: SBM Model" src="../_images/sphx_glr_viz_forceatlas2gpu_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="sphx-glr-clear"></div></dd></dl>
 
+</div>
 </div>
 
 <div class="section">

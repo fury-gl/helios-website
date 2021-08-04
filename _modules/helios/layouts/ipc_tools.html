@@ -241,7 +241,7 @@
     <span class="n">PY_VERSION_8</span> <span class="o">=</span> <span class="kc">False</span>
 
 
-<div class="viewcode-block" id="GenericArrayBufferManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.GenericArrayBufferManager.html#helios.layouts.ipc_tools.GenericArrayBufferManager">[docs]</a><span class="k">class</span> <span class="nc">GenericArrayBufferManager</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<div class="viewcode-block" id="GenericArrayBufferManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.html#helios.layouts.ipc_tools.GenericArrayBufferManager">[docs]</a><span class="k">class</span> <span class="nc">GenericArrayBufferManager</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This implements a abstract (generic) ArrayBufferManager.</span>
 
 <span class="sd">    The GenericArrayBufferManager is used for example to share the</span>
@@ -278,7 +278,7 @@
         <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="SharedMemArrayManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.SharedMemArrayManager.html#helios.layouts.ipc_tools.SharedMemArrayManager">[docs]</a><span class="k">class</span> <span class="nc">SharedMemArrayManager</span><span class="p">(</span><span class="n">GenericArrayBufferManager</span><span class="p">):</span>
+<div class="viewcode-block" id="SharedMemArrayManager"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.html#helios.layouts.ipc_tools.SharedMemArrayManager">[docs]</a><span class="k">class</span> <span class="nc">SharedMemArrayManager</span><span class="p">(</span><span class="n">GenericArrayBufferManager</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An implementation of a GenericArrayBufferManager using SharedMemory</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -381,14 +381,14 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="ShmManagerMultiArrays"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays">[docs]</a><span class="k">class</span> <span class="nc">ShmManagerMultiArrays</span><span class="p">:</span>
+<div class="viewcode-block" id="ShmManagerMultiArrays"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.html#helios.layouts.ipc_tools.ShmManagerMultiArrays">[docs]</a><span class="k">class</span> <span class="nc">ShmManagerMultiArrays</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;This Obj. allows to deal with multiple arrays</span>
 <span class="sd">        stored using SharedMemory</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="ShmManagerMultiArrays.add_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.add_array">[docs]</a>    <span class="k">def</span> <span class="nf">add_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
+<div class="viewcode-block" id="ShmManagerMultiArrays.add_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.add_array">[docs]</a>    <span class="k">def</span> <span class="nf">add_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This creates a shared memory resource</span>
 <span class="sd">        to store the data.</span>
 
@@ -415,7 +415,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_shm_attr_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr_name</span><span class="p">)</span>
         <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">_shm</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ShmManagerMultiArrays.load_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.ShmManagerMultiArrays.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.load_array">[docs]</a>    <span class="k">def</span> <span class="nf">load_array</span><span class="p">(</span>
+<div class="viewcode-block" id="ShmManagerMultiArrays.load_array"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.ipc_tools.html#helios.layouts.ipc_tools.ShmManagerMultiArrays.load_array">[docs]</a>    <span class="k">def</span> <span class="nf">load_array</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">buffer_name</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span>
             <span class="n">num_elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This will load the shared memory resource associate with buffer_name</span>

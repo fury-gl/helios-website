@@ -146,7 +146,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="helios.layouts.html">helios.layouts</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.base.html">helios.layouts.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.force_directed.html">helios.layouts.force_directed</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.forceatlas2gpu</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.forceatlas2gpu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-objects">List of Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">ForceAtlas2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">ForceAtlas2ServerCalc</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.ipc_tools.html">helios.layouts.ipc_tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.mde.html">helios.layouts.mde</a></li>
 </ul>
@@ -235,7 +240,15 @@
 <span id="helios-layouts-forceatlas2gpu"></span><h1>helios.layouts.forceatlas2gpu<a class="headerlink" href="#module-helios.layouts.forceatlas2gpu" title="Permalink to this headline">¶</a></h1>
 <p>IPC-ForceAtlas2: Network Layout using cuGraph</p>
 <p>ForceAtlas2 layout algorithm through IPC using cuGraph.</p>
-<p class="rubric">Classes</p>
+<div class="section" id="list-of-objects">
+<h2>List of Objects<a class="headerlink" href="#list-of-objects" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="#helios.layouts.forceatlas2gpu.ForceAtlas2">ForceAtlas2,</a>
+<a class="reference external" href="#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc">ForceAtlas2ServerCalc,</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h2>ForceAtlas2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.forceatlas2gpu.ForceAtlas2">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.forceatlas2gpu.</code><code class="sig-name descname">ForceAtlas2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">edges</span></em>, <em class="sig-param"><span class="n">network_draw</span></em>, <em class="sig-param"><span class="n">weights</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lin_log_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">edge_weight_influence</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">jitter_tolerance</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">barnes_hut_optimize</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">barnes_hut_theta</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">scaling_ratio</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">strong_gravity_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">gravity</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/forceatlas2gpu.html#ForceAtlas2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.forceatlas2gpu.ForceAtlas2" title="Permalink to this definition">¶</a></dt>
@@ -264,9 +277,9 @@ comunicates with this object through the SharedMemory</p>
 </ul>
 </dd>
 </dl>
-<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="The goal of this example is to show how to use the Helios Network draw with the ForceAtlas2 fro..."><div class="figure align-default" id="id3">
 <img alt="ForceAtlas2: SBM Model" src="../_images/sphx_glr_viz_forceatlas2gpu_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../examples_gallery/viz_forceatlas2gpu.html#sphx-glr-examples-gallery-viz-forceatlas2gpu-py"><span class="std std-ref">ForceAtlas2: SBM Model</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="sphx-glr-clear"></div><dl class="py method">
 <dt id="helios.layouts.forceatlas2gpu.ForceAtlas2.cleanup">
@@ -321,6 +334,9 @@ and right after that refresh the network draw</p>
 
 </dd></dl>
 
+</div>
+<div class="section" id="id2">
+<h2>ForceAtlas2ServerCalc<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.forceatlas2gpu.</code><code class="sig-name descname">ForceAtlas2ServerCalc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">edges_buffer_name</span></em>, <em class="sig-param"><span class="n">positions_buffer_name</span></em>, <em class="sig-param"><span class="n">info_buffer_name</span></em>, <em class="sig-param"><span class="n">weights_buffer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshots_buffer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_snapshots</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">lin_log_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">edge_weight_influence</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">jitter_tolerance</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">barnes_hut_optimize</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">barnes_hut_theta</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">scaling_ratio</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">strong_gravity_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">gravity</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/forceatlas2gpu.html#ForceAtlas2ServerCalc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc" title="Permalink to this definition">¶</a></dt>
@@ -364,6 +380,7 @@ stored.</p></li>
 
 </dd></dl>
 
+</div>
 </div>
 
 <div class="section">

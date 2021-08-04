@@ -3,18 +3,37 @@ helios.backends.fury.tools
 
 
 .. automodule:: helios.backends.fury.tools
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `Uniform,  <#helios.backends.fury.tools.Uniform>`_
+      `Uniforms,  <#helios.backends.fury.tools.Uniforms>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+   Uniform
+   -------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: Uniform
       :members:
       :show-inheritance:
@@ -31,6 +50,19 @@ helios.backends.fury.tools
       .. minigallery:: helios.backends.fury.tools.Uniform
          :add-heading:
       
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+   Uniforms
+   --------
+
    .. autoclass:: Uniforms
       :members:
       :show-inheritance:

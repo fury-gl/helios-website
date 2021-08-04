@@ -3,18 +3,40 @@ helios.backends.fury.draw
 
 
 .. automodule:: helios.backends.fury.draw
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `NetworkDraw,  <#helios.backends.fury.draw.NetworkDraw>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   NetworkDraw
+   -----------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: NetworkDraw
       :members:
       :show-inheritance:

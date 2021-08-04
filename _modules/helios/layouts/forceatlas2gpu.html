@@ -233,7 +233,7 @@
 <span class="kn">from</span> <span class="nn">helios.layouts.base</span> <span class="kn">import</span> <span class="n">NetworkLayoutIPCServerCalc</span>
 
 
-<div class="viewcode-block" id="ForceAtlas2ServerCalc"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc.html#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc">[docs]</a><span class="k">class</span> <span class="nc">ForceAtlas2ServerCalc</span><span class="p">(</span><span class="n">NetworkLayoutIPCServerCalc</span><span class="p">):</span>
+<div class="viewcode-block" id="ForceAtlas2ServerCalc"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.html#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc">[docs]</a><span class="k">class</span> <span class="nc">ForceAtlas2ServerCalc</span><span class="p">(</span><span class="n">NetworkLayoutIPCServerCalc</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This Obj. reads the network information stored in a shared memory</span>
 <span class="sd">        resource and execute the ForceAtlas2 layout algorithm</span>
 
@@ -319,7 +319,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">strong_gravity_mode</span> <span class="o">=</span> <span class="n">strong_gravity_mode</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gravity</span> <span class="o">=</span> <span class="n">gravity</span>
 
-<div class="viewcode-block" id="ForceAtlas2ServerCalc.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc.html#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<div class="viewcode-block" id="ForceAtlas2ServerCalc.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.html#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iters_by_step</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
         <span class="c1"># -1 means the computation has been intialized</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
@@ -345,7 +345,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_shm_manager</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">_repr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span></div></div>
 
 
-<div class="viewcode-block" id="ForceAtlas2"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.ForceAtlas2.html#helios.layouts.forceatlas2gpu.ForceAtlas2">[docs]</a><span class="k">class</span> <span class="nc">ForceAtlas2</span><span class="p">(</span><span class="n">NetworkLayoutIPCRender</span><span class="p">):</span>
+<div class="viewcode-block" id="ForceAtlas2"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.forceatlas2gpu.html#helios.layouts.forceatlas2gpu.ForceAtlas2">[docs]</a><span class="k">class</span> <span class="nc">ForceAtlas2</span><span class="p">(</span><span class="n">NetworkLayoutIPCRender</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Performs the ForceAtlas2 algorithm using the cugraph lib.</span>
 
 <span class="sd">    The ForceAtlas will be called inside of a different process which</span>

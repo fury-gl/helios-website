@@ -3,18 +3,41 @@ helios.layouts.forceatlas2gpu
 
 
 .. automodule:: helios.layouts.forceatlas2gpu
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `ForceAtlas2,  <#helios.layouts.forceatlas2gpu.ForceAtlas2>`_
+      `ForceAtlas2ServerCalc,  <#helios.layouts.forceatlas2gpu.ForceAtlas2ServerCalc>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   ForceAtlas2
+   -----------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: ForceAtlas2
       :members:
       :show-inheritance:
@@ -31,6 +54,32 @@ helios.layouts.forceatlas2gpu
       .. minigallery:: helios.layouts.ForceAtlas2
          :add-heading:
       
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   ForceAtlas2ServerCalc
+   ---------------------
+
    .. autoclass:: ForceAtlas2ServerCalc
       :members:
       :show-inheritance:

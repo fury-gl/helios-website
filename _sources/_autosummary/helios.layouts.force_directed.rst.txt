@@ -3,18 +3,37 @@ helios.layouts.force\_directed
 
 
 .. automodule:: helios.layouts.force_directed
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `HeliosFr,  <#helios.layouts.force_directed.HeliosFr>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+   HeliosFr
+   --------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: HeliosFr
       :members:
       :show-inheritance:

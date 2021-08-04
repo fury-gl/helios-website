@@ -3,18 +3,44 @@ helios.backends.fury.actors
 
 
 .. automodule:: helios.backends.fury.actors
+
+   
+   
+   
+   List of Objects
+   ---------------
+   
+      `FurySuperEdge,  <#helios.backends.fury.actors.FurySuperEdge>`_
+      `FurySuperNode,  <#helios.backends.fury.actors.FurySuperNode>`_
+      `NetworkSuperActor,  <#helios.backends.fury.actors.NetworkSuperActor>`_
+   
+   
+   
+   
+   
    
 
    
    
    
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   FurySuperEdge
+   -------------
 
-   
-   
-   .. rubric:: Classes
-
-  
-   
    .. autoclass:: FurySuperEdge
       :members:
       :show-inheritance:
@@ -31,6 +57,24 @@ helios.backends.fury.actors
       .. minigallery:: helios.backends.fury.actors.FurySuperEdge
          :add-heading:
       
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   FurySuperNode
+   -------------
+
    .. autoclass:: FurySuperNode
       :members:
       :show-inheritance:
@@ -47,6 +91,28 @@ helios.backends.fury.actors
       .. minigallery:: helios.backends.fury.actors.FurySuperNode
          :add-heading:
       
+   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   NetworkSuperActor
+   -----------------
+
    .. autoclass:: NetworkSuperActor
       :members:
       :show-inheritance:

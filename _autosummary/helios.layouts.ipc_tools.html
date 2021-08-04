@@ -147,7 +147,13 @@
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.base.html">helios.layouts.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.force_directed.html">helios.layouts.force_directed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.forceatlas2gpu.html">helios.layouts.forceatlas2gpu</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.ipc_tools</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helios.layouts.ipc_tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-objects">List of Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">GenericArrayBufferManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphx-glr-backref-helios-layouts-ipc-tools-genericarraybuffermanager">SharedMemArrayManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphx-glr-backref-helios-layouts-ipc-tools-sharedmemarraymanager">ShmManagerMultiArrays</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="helios.layouts.mde.html">helios.layouts.mde</a></li>
 </ul>
 </li>
@@ -243,7 +249,16 @@ demvessias’s Blog.”
 <a class="reference external" href="https://blogs.python-gsoc.org/en/demvessiass-blog/post-3-network-layout-algorithms-using-ipc/">blogs.python-gsoc.org/en/demvessiass-blog/post-3</a>
 (accessed Jul. 24, 2021).</p>
 </div>
-<p class="rubric">Classes</p>
+<div class="section" id="list-of-objects">
+<h2>List of Objects<a class="headerlink" href="#list-of-objects" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="#helios.layouts.ipc_tools.GenericArrayBufferManager">GenericArrayBufferManager,</a>
+<a class="reference external" href="#helios.layouts.ipc_tools.SharedMemArrayManager">SharedMemArrayManager,</a>
+<a class="reference external" href="#helios.layouts.ipc_tools.ShmManagerMultiArrays">ShmManagerMultiArrays,</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h2>GenericArrayBufferManager<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.ipc_tools.GenericArrayBufferManager">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.ipc_tools.</code><code class="sig-name descname">GenericArrayBufferManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'float64'</span></em>, <em class="sig-param"><span class="n">num_elements</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/ipc_tools.html#GenericArrayBufferManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.ipc_tools.GenericArrayBufferManager" title="Permalink to this definition">¶</a></dt>
@@ -261,12 +276,15 @@ a different number of elements then the original data</p></li>
 </ul>
 </dd>
 </dl>
-<span class="target" id="sphx-glr-backref-helios-layouts-ipc-tools-genericarraybuffermanager"></span></dd></dl>
+</dd></dl>
 
+</div>
+<div class="section" id="sphx-glr-backref-helios-layouts-ipc-tools-genericarraybuffermanager">
+<span id="id2"></span><h2>SharedMemArrayManager<a class="headerlink" href="#sphx-glr-backref-helios-layouts-ipc-tools-genericarraybuffermanager" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.ipc_tools.SharedMemArrayManager">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.ipc_tools.</code><code class="sig-name descname">SharedMemArrayManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span></em>, <em class="sig-param"><span class="n">dtype</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">buffer_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_elements</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/helios/layouts/ipc_tools.html#SharedMemArrayManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.ipc_tools.SharedMemArrayManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="helios.layouts.ipc_tools.GenericArrayBufferManager.html#helios.layouts.ipc_tools.GenericArrayBufferManager" title="helios.layouts.ipc_tools.GenericArrayBufferManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">helios.layouts.ipc_tools.GenericArrayBufferManager</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#helios.layouts.ipc_tools.GenericArrayBufferManager" title="helios.layouts.ipc_tools.GenericArrayBufferManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">helios.layouts.ipc_tools.GenericArrayBufferManager</span></code></a></p>
 <p>An implementation of a GenericArrayBufferManager using SharedMemory</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,8 +299,11 @@ a different number of elements then the original data</p></li>
 </ul>
 </dd>
 </dl>
-<span class="target" id="sphx-glr-backref-helios-layouts-ipc-tools-sharedmemarraymanager"></span></dd></dl>
+</dd></dl>
 
+</div>
+<div class="section" id="sphx-glr-backref-helios-layouts-ipc-tools-sharedmemarraymanager">
+<span id="id3"></span><h2>ShmManagerMultiArrays<a class="headerlink" href="#sphx-glr-backref-helios-layouts-ipc-tools-sharedmemarraymanager" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="helios.layouts.ipc_tools.ShmManagerMultiArrays">
 <em class="property">class </em><code class="sig-prename descclassname">helios.layouts.ipc_tools.</code><code class="sig-name descname">ShmManagerMultiArrays</code><a class="reference internal" href="../_modules/helios/layouts/ipc_tools.html#ShmManagerMultiArrays"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#helios.layouts.ipc_tools.ShmManagerMultiArrays" title="Permalink to this definition">¶</a></dt>
@@ -339,6 +360,7 @@ a different number of elements then the original data</p></li>
 
 </dd></dl>
 
+</div>
 </div>
 
 <div class="section">
