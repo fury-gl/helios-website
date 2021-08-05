@@ -232,7 +232,7 @@
 <span class="kn">from</span> <span class="nn">helios.layouts.base</span> <span class="kn">import</span> <span class="n">NetworkLayoutAsync</span>
 
 
-<div class="viewcode-block" id="HeliosFr"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.html#helios.layouts.force_directed.HeliosFr">[docs]</a><span class="k">class</span> <span class="nc">HeliosFr</span><span class="p">(</span><span class="n">NetworkLayoutAsync</span><span class="p">):</span>
+<div class="viewcode-block" id="HeliosFr"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr">[docs]</a><span class="k">class</span> <span class="nc">HeliosFr</span><span class="p">(</span><span class="n">NetworkLayoutAsync</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A 2D/3D Force-directed layout method</span>
 
 <span class="sd">    This method is a wrapper for the helios force-directed algorithm, heliosFR.</span>
@@ -295,7 +295,7 @@
             <span class="n">maxWorkers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span>
             <span class="n">updateInterval</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_update_interval_workers</span><span class="p">)</span>
 
-<div class="viewcode-block" id="HeliosFr.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.html#helios.layouts.force_directed.HeliosFr.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<div class="viewcode-block" id="HeliosFr.start"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Starts the helios force-directed layout using others threads (async).</span>
 
 <span class="sd">        Parameters</span>
@@ -318,7 +318,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_interval_timer</span> <span class="o">=</span> <span class="n">IntervalTimer</span><span class="p">(</span>
                      <span class="n">ms</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HeliosFr.stop"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.html#helios.layouts.force_directed.HeliosFr.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="HeliosFr.stop"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This will stop the threads running the</span>
 <span class="sd">        helios force-directed algorithm</span>
 
@@ -333,7 +333,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_started</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="HeliosFr.steps"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.html#helios.layouts.force_directed.HeliosFr.steps">[docs]</a>    <span class="k">def</span> <span class="nf">steps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterations</span><span class="p">):</span>
+<div class="viewcode-block" id="HeliosFr.steps"><a class="viewcode-back" href="../../../_autosummary/helios.layouts.force_directed.HeliosFr.html#helios.layouts.force_directed.HeliosFr.steps">[docs]</a>    <span class="k">def</span> <span class="nf">steps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterations</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A Sync version of the helios force-directed algorithm.</span>
 
 <span class="sd">        Parameters</span>

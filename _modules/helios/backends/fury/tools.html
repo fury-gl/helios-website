@@ -221,7 +221,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="Uniform"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.html#helios.backends.fury.tools.Uniform">[docs]</a><span class="k">class</span> <span class="nc">Uniform</span><span class="p">:</span>
+<div class="viewcode-block" id="Uniform"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniform.html#helios.backends.fury.tools.Uniform">[docs]</a><span class="k">class</span> <span class="nc">Uniform</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;This creates a uniform shader variable</span>
 
 <span class="sd">    It&#39;s responsible to store the value of a given uniform</span>
@@ -263,7 +263,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">vtk_func_uniform</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;SetUniform</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uniform_type</span><span class="si">}</span><span class="s1">&#39;</span>
 
-<div class="viewcode-block" id="Uniform.execute_program"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.html#helios.backends.fury.tools.Uniform.execute_program">[docs]</a>    <span class="k">def</span> <span class="nf">execute_program</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+<div class="viewcode-block" id="Uniform.execute_program"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniform.html#helios.backends.fury.tools.Uniform.execute_program">[docs]</a>    <span class="k">def</span> <span class="nf">execute_program</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Given a shader program, this method</span>
 <span class="sd">        will update the value with the associated uniform variable</span>
 <span class="sd">        in a draw call</span>
@@ -281,7 +281,7 @@
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Uniform(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s1">)&#39;</span></div>
 
 
-<div class="viewcode-block" id="Uniforms"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.html#helios.backends.fury.tools.Uniforms">[docs]</a><span class="k">class</span> <span class="nc">Uniforms</span><span class="p">:</span>
+<div class="viewcode-block" id="Uniforms"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniforms.html#helios.backends.fury.tools.Uniforms">[docs]</a><span class="k">class</span> <span class="nc">Uniforms</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uniforms</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Creates an object which store and execute an uniform variable.</span>
 
@@ -313,7 +313,7 @@
 
             <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Uniforms.__call__"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.html#helios.backends.fury.tools.Uniforms.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_caller</span><span class="p">,</span> <span class="n">_event</span><span class="p">,</span> <span class="n">calldata</span><span class="o">=</span><span class="kc">None</span><span class="p">,):</span>
+<div class="viewcode-block" id="Uniforms.__call__"><a class="viewcode-back" href="../../../../_autosummary/helios.backends.fury.tools.Uniforms.html#helios.backends.fury.tools.Uniforms.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_caller</span><span class="p">,</span> <span class="n">_event</span><span class="p">,</span> <span class="n">calldata</span><span class="o">=</span><span class="kc">None</span><span class="p">,):</span>
         <span class="sd">&quot;&quot;&quot;This method should be used as a callback for a vtk Observer</span>
 
 <span class="sd">        Execute the shader program with the given uniform variables.</span>
